@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Maname');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+*{ 
+margin: 0;
+/* scroll-behavior: smooth; */
+overflow: hidden;
+} 
+.bgimg {
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    scale: 95%;
+    top: -50px;
+    left: -70px;
+    z-index: -1;
+    pointer-events: none;
+}
+.png{
+    width: 149px;
+    height: 49px;
+}
+.logo{
+    width: 1728px;
+    display: flex;
+    justify-content: center;
+    padding-top: 61px;
+}
+.lefttext{
+   display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-top: 150px;
+}
+.getin{
+
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 7%;
+}
+.maintxt{
+    width: 780px;
+    color: #FFF;
+    font-feature-settings: 'subs' on;
+    font-family: "IBM Plex Sans JP";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 192.055%; 
+    letter-spacing: 19.6px;
+    padding-top: 24px;
+}
+.pragg{
+    color: #FFF;
+    font-feature-settings: 'subs' on;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 192.055%; /* 22.093px */
+    letter-spacing: 1.68px;
+    padding-top: 20px;
+}
+.contactus{
+    width: 149px;
+    height: 102px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contactus1{
+    color: #FFF;
+    font-feature-settings: 'subs' on;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 92.055%;
+    letter-spacing: 1.96px;
+}
+.downtext{
+    color: rgba(255, 255, 255);
+    opacity: 70%;
+    font-feature-settings: 'subs' on;
+    font-family: Manrope;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 92.055%;
+    letter-spacing: 1.61px;
+}
+.email1{
+    width: 229px;
+    height: 102px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.smolinfo{
+    width: 503px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 80px;
+}
+.Address1{
+    width: 229px;
+    height: 102px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-left: 80px;
+}
+.Insidebox{
+    width: 656px;
+    height: 720px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    /* background: rgba(0, 0, 0); */
+ 
+}
+.container2{
+    position: relative;
+    top: -730px;
+    left: 932px;
+    z-index: 0;
+}
+.sthead{
+    color: #FFF;
+    font-feature-settings: 'subs' on;
+    font-family: "IBM Plex Sans JP";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 192.055%; 
+    letter-spacing: 10.29px;
+}
+.ndhead{
+    color: #FFF;
+    font-feature-settings: 'subs' on;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 192.055%; 
+    letter-spacing: 1.68px;
+    padding-top: 5px;
+}
+.Text11{
+    position: relative;
+    padding-top: 50px;
+    padding-left: 60px;
+    
+}
+.plcholder{
+    width: 540px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 3px #ffffff;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    padding-top: 40px;
+    color: #d1d1d1;
+}
+.plcholder::placeholder {
+    color: #d1d1d1;
+    opacity: 1; 
+}
+.btn{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-bottom: 3px #ffffff;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    padding-top: 40px;
+    padding-left: 420px;
+    color: #ffffff;
+    cursor: pointer;
+}

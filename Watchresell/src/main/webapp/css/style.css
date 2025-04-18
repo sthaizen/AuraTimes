@@ -1,0 +1,46 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: 0;
+    font-family: Arial, sans-serif;
+}
+
+:root{
+	--header-height: 100px;
+	--footer-height: 80px;
+}
+
+html, body {
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+	height: var(--header-height);
+}
+
+.container {
+	min-height: calc(100% - var(--header-height) - var(--footer-height));
+	height: auto;
+}
+
+.footer{
+	height: var(--footer-height);
+}
+
+.box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+    color: #222;
+}
