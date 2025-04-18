@@ -1,4 +1,5 @@
 # AuraTimes
 WatchResell Platform
-MEMBERS
+<br>
+Team 
 1 Yathartha Shrestha
