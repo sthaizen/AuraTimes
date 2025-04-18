@@ -43,7 +43,7 @@
                     <div class="email1">
                         <h1 class="contactus1" style="cursor: pointer;">EMAIL</h1>
                         <h3 class="downtext">Aurahiaurahoga@gmail.com</h3>
-                        <h3 class="downtext">Auramax@gmail.com</h3>
+                        <h3 class="downtext">Aurapromax@gmail.com</h3>
                     </div>
                 </div>
                 <div class="Address1">
