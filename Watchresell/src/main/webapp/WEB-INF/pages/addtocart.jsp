@@ -16,7 +16,7 @@
          <!-- Navigation -->
          <nav class="main-nav" style="top: 15px;">
             <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"> 
-            <a class="Menu"><%= session.getAttribute("Username")%></a> 
+            <a href="userprofile" class="Menu"><%= session.getAttribute("Username")%></a> 
             </div>
            
             <div class="logo" style="position: relative; left: 210px;"><a href="home.html"><img src="${pageContext.request.contextPath}/assets/PNG/black logo.png" alt="Logo" /></div></a>

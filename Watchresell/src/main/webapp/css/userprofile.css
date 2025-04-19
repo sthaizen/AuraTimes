@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Maname');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body fills the viewport */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bgimg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;       
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container1 {
+    height: 100vh;            
+    width: 100vw;             
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+}
+
+.Glasscontainer {
+    width: 1253px;
+    height: 764px;
+    border-radius: 33px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(121, 121, 121, 0.09);
+    backdrop-filter: blur(17.5px);
+    display: flex;
+    flex-direction: column;
+}
+
+.accset{
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    padding-top: 57px;
+}
+.genral{
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.parg{
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.secondarytxt{
+    padding-top: 43px;
+    padding-left: 56px;
+}
+.plcholder{
+    width: 451px;
+    height: 67px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    border-radius: 11px;
+    border: none;
+    background: rgba(125, 125, 125, 0.16);
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    outline: none;
+    padding-left: 14px;
+    
+}
+
+.plcholder::placeholder {
+    color:  rgba(255, 255, 255, 0.20);
+    opacity: 1;
+}
+
+.placetxt1{
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-bottom: 7px;
+    padding-left: 14px;
+    padding-top: 16px;
+}
+.placefield{
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+.placetxt2{
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-bottom: 7px;
+    padding-left: 14px;
+    padding-top: 16px;
+}
+
+.righttxt{
+    padding-left: 169px;
+}
+
+.btn1{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-bottom: 3px #ffffff;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+.btn2{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-bottom: 3px #FF3F3F;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 600;
+    color: #FF3F3F;
+    cursor: pointer;
+    padding-left: 31px;
+}
+.buttons{
+     padding-top: 62px;
+    padding-left: 170px;
+}
+.backbtn{
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    list-style: none;
+    text-decoration: none;
+    padding-left: 756PX;
+}
+.secondarytxt{
+    display: flex;
+    flex-direction: row;
+    
+}

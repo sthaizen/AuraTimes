@@ -1,15 +1,5 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-   // if (session.getAttribute("name") == null) {
-      //  response.sendRedirect("Login.jsp");
-        //return; // Important to stop further execution
-   // 
-%>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +59,7 @@
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="#">FRIENDS & PARTHER</a></li>
                     <li><a href="#">STORE LOCATIONS</a></li>
-                    <li><a href="login">ACCOUNT</a></li>
+                    <li><a href="userprofile">ACCOUNT</a></li>
                 </ul>
             </div>
             <div class="Vector1"><img src="${pageContext.request.contextPath}/assets/PNG/Vector 1.png" alt="Line" /></div>
