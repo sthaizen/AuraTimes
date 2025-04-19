@@ -28,10 +28,19 @@
                     <a href="home" class="backbtn">< Back</a>
                 </div>
                 </div>
+                   <!-- Display validation messages  -->
+                        <div>
+                            <% String status = (String) request.getAttribute("status"); %>
+                            <% if (status != null) { %>
+                                <div class="parg">
+                                    <%= status %>
+                                </div>
+                            <% } %>
+                        </div>
 
                 <div class="placefield">
                     <div class="lefttext" style="padding-left: 93px;">
-                        <form action="" method="">
+                        <form action="userprofile" method="post">
                         <%
 						    String fullName = (session.getAttribute("FullName") != null) ? session.getAttribute("FullName").toString() : "";
 						    String username = (session.getAttribute("Username") != null) ? session.getAttribute("Username").toString() : "";
@@ -47,11 +56,11 @@
                                 </div>
                                 <div>
                                     <h3 class="placetxt1">Date of Birth</h3>
-                                    <input type="datetime" name="Dateobirth" placeholder="<%= session.getAttribute("DateOfBirth") %>" required class="plcholder" >
+                                    <input type="date" name="Dateobirth" placeholder="<%= session.getAttribute("DateOfBirth") %>" required class="plcholder" >
                                 </div>
                                 <div>
                                     <h3 class="placetxt1">Gender</h3>
-                                    <input type="password" name="Gender" placeholder="<%= session.getAttribute("Gender") %>" required class="plcholder" ><br>
+                                    <input type="gender" name="Gender" placeholder="<%= session.getAttribute("Gender") %>" required class="plcholder" ><br>
                                 </div>
                                 <div>
                                     <h3 class="placetxt1">Phone Number</h3>
@@ -75,8 +84,8 @@
                         
 
                                     <div class="buttons">
-                                        <button type="submit" class="btn1">Save Changes</button>
-                                        <button type="submit" class="btn2">Delete Account</button>
+                                        <button type="submit" class="btn1" value="update">Save Changes</button>
+                                        <button type="submit" class="btn2" value="delete">Delete Account</button>
                                     </div>
                             </form>
                     </div>

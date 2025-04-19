@@ -55,11 +55,11 @@
             <div class="insidetext" style="position: relative; top: -50px; ">
                 <ul>
                     <li><a href="#">THE BRAND</a></li>
-                    <li><a href="#">SAVOIR-FAIRE</a></li>
+                    <li><a href="userprofile">USER PROFILE</a></li>
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="#">FRIENDS & PARTHER</a></li>
                     <li><a href="#">STORE LOCATIONS</a></li>
-                    <li><a href="userprofile">ACCOUNT</a></li>
+                    <li><a href="login">ACCOUNT</a></li>
                 </ul>
             </div>
             <div class="Vector1"><img src="${pageContext.request.contextPath}/assets/PNG/Vector 1.png" alt="Line" /></div>
