@@ -9,21 +9,21 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+import com.Auratimes.util.CookieUtil;
+import com.Auratimes.util.SessionUtil;
+
 /**
  * Servlet implementation class logoutController
  */
-@WebServlet("/logout")
+@WebServlet(asyncSupported = true, urlPatterns = {"/logout"})
 public class logoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		HttpSession session = request.getSession();
-		session.invalidate();
-		response.sendRedirect("login");
+		CookieUtil.deleteCookie(response, "role");
+		SessionUtil.invalidateSession(request);
+		response.sendRedirect(request.getContextPath() + "/login");
 	}
 
 
