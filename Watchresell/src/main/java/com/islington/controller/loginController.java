@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Cookie;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -51,13 +52,32 @@ public class loginController extends HttpServlet {
 
                 // Decrypt and compare using PasswordUtil
                 if (PasswordUtil.match(password, username, encryptedPassword)) {
+                    // Set session attributes
                     session.setAttribute("Username", rs.getString("Username"));
                     session.setAttribute("FullName", rs.getString("FullName"));
                     session.setAttribute("DateOfBirth", rs.getString("DateOfBirth"));
                     session.setAttribute("Gender", rs.getString("Gender"));
                     session.setAttribute("PhoneNumber", rs.getString("PhoneNumber"));
                     session.setAttribute("Email", rs.getString("Email"));
-                    dispatcher = request.getRequestDispatcher("/WEB-INF/pages/home.jsp");
+
+                    // Optional: Set user role in session
+                    String role = "customer";  // Default role
+                    if ("admin".equals(rs.getString("Username"))) {
+                        role = "admin";  // Modify based on actual role check
+                    }
+                    session.setAttribute("Role", role);
+
+                    // Set the role cookie (optional, valid for 30 days)
+                    Cookie roleCookie = new Cookie("role", role);
+                    roleCookie.setMaxAge(30 * 24 * 60 * 60); // 30 days in seconds
+                    response.addCookie(roleCookie);
+
+                    // Redirect to the home page or dashboard based on role
+                    if ("admin".equals(role)) {
+                        dispatcher = request.getRequestDispatcher("/WEB-INF/pages/dashboard.jsp");
+                    } else {
+                        dispatcher = request.getRequestDispatcher("/WEB-INF/pages/home.jsp");
+                    }
                 } else {
                     request.setAttribute("status", "false");
                     dispatcher = request.getRequestDispatcher("/WEB-INF/pages/login.jsp");

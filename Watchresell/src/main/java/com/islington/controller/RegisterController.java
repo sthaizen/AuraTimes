@@ -86,7 +86,7 @@ public class RegisterController extends HttpServlet {
 
             int rowCount = pst.executeUpdate();
             jakarta.servlet.http.HttpSession session = request.getSession();
-            ResultSet rs = pst.executeQuery();
+            //ResultSet rs = pst.executeQuery();
             
             if (rowCount > 0) {
             	session.setAttribute("FullName", fullName);
