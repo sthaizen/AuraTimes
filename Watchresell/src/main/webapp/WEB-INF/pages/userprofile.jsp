@@ -32,36 +32,45 @@
                 <div class="placefield">
                     <div class="lefttext" style="padding-left: 93px;">
                         <form action="" method="">
+                        <%
+						    String fullName = (session.getAttribute("FullName") != null) ? session.getAttribute("FullName").toString() : "";
+						    String username = (session.getAttribute("Username") != null) ? session.getAttribute("Username").toString() : "";
+						    String dob = (session.getAttribute("DateOfBirth") != null) ? session.getAttribute("DateOfBirth").toString() : "";
+						    String gender = (session.getAttribute("Gender") != null) ? session.getAttribute("Gender").toString() : "";
+						    String phone = (session.getAttribute("Phone") != null) ? session.getAttribute("Phone").toString() : "";
+						    String email = (session.getAttribute("Email") != null) ? session.getAttribute("Email").toString() : "";
+						%>
                                 <div >
                                     <h3 class="placetxt1">Full Name</h3>
-                                    <input type="text" name="Name" placeholder="Full Name" required class="plcholder" ><br>
+
+                                    <input type="text" name="FullName" placeholder="<%= session.getAttribute("FullName") %>" required class="plcholder" ><br>
                                 </div>
                                 <div>
                                     <h3 class="placetxt1">Date of Birth</h3>
-                                    <input type="datetime" name="Dateobirth" placeholder="Date of Birth" required class="plcholder" >
+                                    <input type="datetime" name="Dateobirth" placeholder="<%= session.getAttribute("DateOfBirth") %>" required class="plcholder" >
                                 </div>
                                 <div>
                                     <h3 class="placetxt1">Gender</h3>
-                                    <input type="password" name="Gender" placeholder="Password" required class="plcholder" ><br>
+                                    <input type="password" name="Gender" placeholder="<%= session.getAttribute("Gender") %>" required class="plcholder" ><br>
                                 </div>
                                 <div>
                                     <h3 class="placetxt1">Phone Number</h3>
-                                    <input type="number" name="Phonenumber" placeholder="Phone Number" required class="plcholder" ><br>
+                                    <input type="number" name="Phonenumber" placeholder="<%= session.getAttribute("PhoneNumber") %>" required class="plcholder" ><br>
                                 </div> 
                     </div>
                         <div class="righttxt" >
                             
                                     <div >
                                         <h3 class="placetxt2">User Name</h3>
-                                        <input type="text" name="Username" placeholder="User Name" required class="plcholder" ><br>
+                                        <input type="text" name="Username" placeholder="<%= session.getAttribute("Username")%>" required class="plcholder" ><br>
                                     </div>
                                     <div>
                                         <h3 class="placetxt2">Email</h3>
-                                        <input type="datetime" name="Email" placeholder="Date of Birth" required class="plcholder" >
+                                        <input type="datetime" name="Email" placeholder="<%= session.getAttribute("Email") %>" required class="plcholder" >
                                     </div>
                                     <div>
-                                        <h3 class="placetxt2">Password</h3>
-                                        <input type="password" name="Password" placeholder="Password" required class="plcholder" ><br>
+                                        <h3 class="placetxt2">Change Password</h3>
+                                        <input type="password" name="Password" placeholder="New Password" required class="plcholder" ><br>
                                     </div>
                         
 

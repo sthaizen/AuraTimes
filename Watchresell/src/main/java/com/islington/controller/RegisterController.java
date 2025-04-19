@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+import java.sql.ResultSet;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -85,7 +85,11 @@ public class RegisterController extends HttpServlet {
             pst.setString(7, phoneNumber);
 
             int rowCount = pst.executeUpdate();
+            jakarta.servlet.http.HttpSession session = request.getSession();
+            ResultSet rs = pst.executeQuery();
+            
             if (rowCount > 0) {
+            	session.setAttribute("FullName", fullName);
                 request.setAttribute("status", "Registration successful!");
             } else {
                 request.setAttribute("status", "Registration failed, please try again.");

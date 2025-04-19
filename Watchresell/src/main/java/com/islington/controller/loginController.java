@@ -52,6 +52,11 @@ public class loginController extends HttpServlet {
                 // Decrypt and compare using PasswordUtil
                 if (PasswordUtil.match(password, username, encryptedPassword)) {
                     session.setAttribute("Username", rs.getString("Username"));
+                    session.setAttribute("FullName", rs.getString("FullName"));
+                    session.setAttribute("DateOfBirth", rs.getString("DateOfBirth"));
+                    session.setAttribute("Gender", rs.getString("Gender"));
+                    session.setAttribute("PhoneNumber", rs.getString("PhoneNumber"));
+                    session.setAttribute("Email", rs.getString("Email"));
                     dispatcher = request.getRequestDispatcher("/WEB-INF/pages/home.jsp");
                 } else {
                     request.setAttribute("status", "false");
