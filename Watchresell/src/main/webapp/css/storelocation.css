@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Maname');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif; /* Added a fallback font */
+  margin: 0;
+  color: #f0f0f0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/assets/img/clock.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+/* Original Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.15);
+    color: #fff;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left .menu-icon {
+    font-size: 1.3rem;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-left .menu-icon:hover {
+    color: #ddd;
+}
+
+.header-center h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 0.8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header-right .main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-right .main-nav ul li {
+    margin-left: 30px;
+}
+
+.header-right .main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.header-right .main-nav ul li a:hover {
+    color: #ddd;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Map Section */
+.map-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(37, 37, 37, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.map-container {
+    max-width: 95%;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.map-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+/* Company Description Section */
+.company-description {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(37, 37, 37, 0.15);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.description-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.description-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.description-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+
+/* FOOTERRRR */
+.footerbody{
+    width: 1900px;
+    height: 443px;
+    flex-shrink: 0;
+    background: #F4F4F4;
+
+}
+.follow{
+    color: rgba(0, 0, 0, 0.69);
+    font-family: Mandali;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 13px;
+}
+.icons{
+    width:  237px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.logos{
+    padding-left: 132px;
+    padding-top: 109px;
+}
+.maintxt{
+    color: #2A2A2A;
+    font-family: Mandali;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.secondtxt{
+    color: #2A2A2A;
+    font-family: Mandali;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.footertxt{
+    width: 1250px;
+    height: 380px;
+    position: relative;
+    top:-245px;
+    left: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer1111{
+    position: relative;
+    top: 450px;}
+
+/* Animation classes */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.aura{
+    position: fixed;
+    height: auto;
+    left: 0px;
+    width: 200px;
+}
+
+
+
+   /* FOOTERRRR */
+.footerbody{
+    width: 1728px;
+    height: 443px;
+    flex-shrink: 0;
+    background: #F4F4F4;
+
+}
+.follow{
+    color: rgba(0, 0, 0, 0.69);
+    font-family: Mandali;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 13px;
+}
+.icons{
+    width:  237px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.logos{
+    padding-left: 132px;
+    padding-top: 109px;
+}
+.maintxt{
+    color: #2A2A2A;
+    font-family: Mandali;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.secondtxt{
+    color: #2A2A2A;
+    font-family: Mandali;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.footertxt{
+    width: 1109px;
+    height: 380px;
+    position: relative;
+    top: -250px;
+    left: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer1111{
+    position: relative;
+}

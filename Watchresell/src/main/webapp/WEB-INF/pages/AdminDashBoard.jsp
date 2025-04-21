@@ -65,7 +65,7 @@
 
                 <li style="margin-top: 30px;">
                     
-                    <a href="#">
+                    <a href="logout">
                         <span class="icon">
                             <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/logout.png" alt="logo" style="width: 30px;"></div>
                         </span>
