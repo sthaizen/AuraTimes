@@ -241,7 +241,7 @@
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/views.png"alt="" style="width: 55px; margin-left: 5px;">
+                <img src="${pageContext.request.contextPath}/assets/img/views.png"alt="" style="width: 55px; margin-left: 10px;">
             </div>
         </div>
 
@@ -252,7 +252,7 @@
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/cart.png" alt="" style="width: 55px; margin-left: 5px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/cart.png" alt="" style="width: 55px; margin-left: 10px;">            </div>
         </div>
 
         <div class="card">
@@ -262,7 +262,7 @@
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/reviews.png" alt="" style="width: 55px; margin-left: 5px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/reviews.png" alt="" style="width: 55px; margin-left: 50px;">            </div>
         </div>
 
         <div class="card">
@@ -272,7 +272,7 @@
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/profit.png" alt="" style="width: 55px; margin-left: 5px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/profit.png" alt="" style="width: 55px; margin-left: 50px;">            </div>
 
         </div>
 
@@ -306,8 +306,8 @@
         };
     </script>
     <!---stats photo-->
-    <div class="statsimg" style="width: 500px; left: 370px; position: relative; top: 100px;">
-        <img src="${pageContext.request.contextPath}/assets/img/stats.png" alt="stats">
+    <div class="statsimg" style=" left: 320px; position: relative; top: 100px;">
+        <img src="${pageContext.request.contextPath}/assets/img/bahnukolagi.png" alt="stats">
     </div>
 
 </body>

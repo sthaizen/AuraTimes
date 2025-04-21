@@ -138,7 +138,7 @@ body {
   width: calc(100% - 300px);
   left: 300px;
   min-height: 100vh;
-  background: var(--white);
+  background: #EDEEF1;
   transition: 0.5s;
 }
 .main.active {
@@ -198,6 +198,8 @@ body {
   cursor: pointer;
   height: 490px;
   margin-top: 10px;
+  position:relative;
+ z-index: 2;
 
 }
 .imgBx-1 img{
@@ -218,7 +220,7 @@ left: 25px;
 }
 
 .recentCustomers table tr:hover {
-  background: #7d95b4;
+  background: #EDEEF1;
   color: white;
 }
 .imgBx-1 img{
@@ -240,6 +242,8 @@ left: 25px;
   cursor: pointer;
   height: 490px;
   margin-top: 10px;
+   position:relative;
+ z-index: 2;
 
 }
 
@@ -269,8 +273,8 @@ left: 25px;
 /* ======================= Cards ====================== */
 .cardBox {
   position: relative;
-  width: 40%;
-  left: 350px;
+  width: 75%;
+  left: 310px;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -302,19 +306,8 @@ left: 25px;
   margin-top: 5px;
 }
 
-.cardBox .card .iconBx {
-  font-size: 3.5rem;
-  color: var(--black2);
-}
 
-.cardBox .card:hover {
-  background: rgb(77, 111, 156);
-}
-.cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx {
-  color: white;
-}
+
 
 /*--- card layout main page----*/
 
@@ -322,10 +315,20 @@ left: 25px;
 
 /*-- stats image---*/
 .statsimg{
-  width: 500px;
+  width: 1000px;
   left: 200px;
   top: 20px;
 }
+
+.statsimg img{
+	
+
+width: 1300px;
+position: relative;
+z-index: 1;
+}
+
+
 /* ====================== Responsive Design ========================== */
 @media (max-width: 991px) {
   .navigation {

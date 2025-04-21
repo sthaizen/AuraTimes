@@ -62,7 +62,7 @@ public class loginController extends HttpServlet {
 
                     // Optional: Set user role in session
                     String role = "customer";  // Default role
-                    if ("admin".equals(rs.getString("Username"))) {
+                    if ("yatharthadai".equals(rs.getString("Username"))) {
                         role = "admin";  // if you want to make changes in the admin update here
                     }
                     session.setAttribute("Role", role);
@@ -74,7 +74,7 @@ public class loginController extends HttpServlet {
 
                     // Redirect to the home page or dashboard based on role
                     if ("admin".equals(role)) {
-                        dispatcher = request.getRequestDispatcher("/WEB-INF/pages/dashboard.jsp");
+                        dispatcher = request.getRequestDispatcher("/WEB-INF/pages/AdminDashBoard.jsp");
                     } else {
                         dispatcher = request.getRequestDispatcher("/WEB-INF/pages/home.jsp");
                     }

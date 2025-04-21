@@ -43,8 +43,8 @@
             <div class="inner-main-nav">
                 <ul>
                     <li id="coll"><a href="#">Collections</a></li>
-                    <li id="coll"><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
-                    <li id="coll"><a href="addtocart ">Add to cart</a></li>
+                    <li id="coll"><a href="contact">Contact</a></li>
+                    <li id="coll"><a href="addtocart">Add to cart</a></li>
                 </ul>
             </div>
         </nav>
