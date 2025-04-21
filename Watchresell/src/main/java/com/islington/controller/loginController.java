@@ -63,7 +63,7 @@ public class loginController extends HttpServlet {
                     // Optional: Set user role in session
                     String role = "customer";  // Default role
                     if ("admin".equals(rs.getString("Username"))) {
-                        role = "admin";  // Modify based on actual role check
+                        role = "admin";  // if you want to make changes in the admin update here
                     }
                     session.setAttribute("Role", role);
 

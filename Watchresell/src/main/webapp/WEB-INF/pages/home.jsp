@@ -57,7 +57,7 @@
                     <li><a href="#">THE BRAND</a></li>
                     <li><a href="userprofile">USER PROFILE</a></li>
                     <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">FRIENDS & PARTHER</a></li>
+                    <li><a href="AdminDashBoard">FRIENDS & PARTHER</a></li>
                     <li><a href="#">STORE LOCATIONS</a></li>
                     <li><a href="login">ACCOUNT</a></li>
                 </ul>
