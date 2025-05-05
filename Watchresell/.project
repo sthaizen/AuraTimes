@@ -28,6 +28,13 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/webapp/uploads</name>
+			<type>2</type>
+			<location>E:/Computing/Fourth Semister/Advanced Programming and Technologies/.metadata/.plugins/org.eclipse.wst.server.core/tmp2/wtpwebapps/Watchresell/uploads</location>
+		</link>
+	</linkedResources>
 	<filteredResources>
 		<filter>
 			<id>1742924570329</id>

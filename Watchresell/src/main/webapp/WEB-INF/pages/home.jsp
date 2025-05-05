@@ -42,7 +42,7 @@
             <div class="logo" style="position: relative; left: 210px;"><img src="${pageContext.request.contextPath}/assets/PNG/Logo.png" alt="Logo" /></div>
             <div class="inner-main-nav">
                 <ul>
-                    <li id="coll"><a href="#">Collections</a></li>
+                    <li id="coll"><a href="Collection">Collections</a></li>
                     <li id="coll"><a href="contact">Contact</a></li>
                     <li id="coll"><a href="addtocart">Add to cart</a></li>
                 </ul>
