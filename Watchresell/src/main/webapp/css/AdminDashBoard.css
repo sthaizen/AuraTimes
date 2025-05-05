@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -25,6 +26,8 @@
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  	background: #EDEEF1;
+  
 }
 
 .container {
@@ -220,7 +223,7 @@ left: 25px;
 }
 
 .recentCustomers table tr:hover {
-  background: #EDEEF1;
+  background: #7d95b4;
   color: white;
 }
 .imgBx-1 img{
@@ -307,7 +310,14 @@ left: 25px;
 }
 
 
-
+.cardBox .card:hover {
+  background: rgb(77, 111, 156);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+  color: white;
+}
 
 /*--- card layout main page----*/
 
