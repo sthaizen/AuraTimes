@@ -166,7 +166,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="#add-product-form">
                         <span class="icon">
                             <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/product.png" alt="logo" style="width: 35px;"></div>
                         </span>
@@ -427,7 +427,7 @@
     </div>
         <!---for product section-->
     
-<div class="form-container">
+<div class="form-container" id="add-product-form">
   <h2>Add Product</h2>
   <form action="${pageContext.request.contextPath}/AdminDashBoard" method="post" enctype="multipart/form-data">
     <div class="form-group">
