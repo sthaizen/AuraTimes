@@ -2,8 +2,10 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
   <display-name>islington-student</display-name>
   <welcome-file-list>
-    <welcome-file>home</welcome-file>
-    <welcome-file>home</welcome-file>
+    <welcome-file>AdminDashBoard</welcome-file>
+    <welcome-file>AdminDashBoard</welcome-file>
+    <!-- <welcome-file>Collection</welcome-file>
+    <welcome-file>Collection</welcome-file>   -->
     <welcome-file>index.htm</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.jsp</welcome-file>
@@ -15,7 +17,8 @@
     <url-pattern>/img/*</url-pattern>
     <url-pattern>/Logo/*</url-pattern>
     <url-pattern>/PNG/*</url-pattern>
-     <url-pattern>/Video/*</url-pattern>
+    <url-pattern>/Video/*</url-pattern>
+    <url-pattern>/uploads/*</url-pattern>
     <url-pattern>/assets/*</url-pattern>
     <url-pattern>/components/*</url-pattern>
 </servlet-mapping>

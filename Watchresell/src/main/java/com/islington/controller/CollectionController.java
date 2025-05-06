@@ -6,33 +6,42 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 import com.Auratimes.model.ProductModel;
 import com.Auratimes.service.CollectionServices;
 
 @WebServlet(asyncSupported = true, urlPatterns = { "/Collection" })
-
 public class CollectionController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-      private CollectionServices collectionServices;
+    private static final long serialVersionUID = 1L;
+    private CollectionServices collectionServices;
+
     /**
-     * @see HttpServlet#HttpServlet()
+     * Constructor to initialize CollectionServices.
      */
     public CollectionController() {
-     collectionServices = new CollectionServices();
+        collectionServices = new CollectionServices();
     }
+
+    /**
+     * Handles the GET request to fetch all products and forward to collection page.
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    	request.setAttribute("collectionList", collectionServices.getAllVehicles());
+        
+        // Fetch all products from the service layer
+        List<ProductModel> collectionList = collectionServices.getAllProducts();
+        
+        // Set the collection list to be accessed in JSP
+        request.setAttribute("collectionList", collectionList);
+        
+        // Forward the request to the Collection.jsp page
         request.getRequestDispatcher("/WEB-INF/pages/Collection.jsp").forward(request, response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // process form data
+        // Process form data (currently unused)
     }
-
-	
-
 }
