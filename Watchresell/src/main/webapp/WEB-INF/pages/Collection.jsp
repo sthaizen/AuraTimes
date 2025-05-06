@@ -24,7 +24,7 @@
                 <ul>
                     <li id="coll"><a href="#">Collections</a></li>
                     <li id="coll"><a href="contact.html">Contact</a></li>
-                    <li id="coll"><a href="#">Add to cart</a></li>
+                    <li id="coll"><a href="addtocart">Add to cart</a></li>
                 </ul>
             </div>
             
@@ -66,7 +66,7 @@
                     <div class="watch1">
                         <div>
                             <div class="imagecontainer">
-                                <!-- Ensure image path is correct -->
+                                
                                 <img src="${pageContext.request.contextPath}/uploads/${product.product_Img}" class="imagess" alt="Product Image">
                             </div>
                             <div class="imagetext">
@@ -88,7 +88,7 @@
             <div class="thirdcard" style="position: relative; z-index: 310;">
                 <div class="textoomoon1">
                     <h1 class="symbol">THE MOON-WATCH</h1>
-                    <h3 class="parag1">Discover this rare Moonwatch choice, inspired by the colours of astronaut spacesuits...</h3>
+                    <h3 class="parag1">Discover this rare Moonwatch choice, inspired by the colours of astronaut spacesuits. Along with contrasting black details and a Speedmaster name in red, the entire surface features a glossy lacquered finish – the first time ever on the Moonwatch’s step dial.</h3>
                 </div>
                 <div class="addposter">
                     <div class="handgmt">
@@ -103,11 +103,14 @@
                                 <h3 class="transparntoo">40 mm, White Gold</h3>
                                 <h2 class="classooo">USD $14,000</h2>
                                 <h3 class="shopnow">Shop Now</h3>
+                                <a href="" class="cartimg"> <img src="${pageContext.request.contextPath}/assets/PNG/Cartsml.png" alt=""></a>
+                    <img src="${pageContext.request.contextPath}/assets/PNG/vector3.png" class="vector3">
                             </div>
                         </div>
                     </div>
                 </div>
             </div> 
+            
         </div>
     </body>
 </html>

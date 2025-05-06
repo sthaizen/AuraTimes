@@ -14,7 +14,7 @@ margin: 0;
 body {
 
 /* box-sizing: border-box; */
-overflow-x: hidden;
+ overflow-x: hidden; 
 
 
 }
@@ -214,7 +214,9 @@ li{
     display: flex;
     justify-content: center;  
     margin: 0 auto; 
-    margin-top: 100px;
+    margin-top: 0px;
+    scale: 101%;
+    
       
 }
 .watch1{
@@ -274,9 +276,15 @@ li{
 
 }
 .insideshit{
-    display: flex;
-    flex-direction: column;
+   width: 100%;
+    max-width: 1227px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* space between cards */
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
 }
 .astlayer2{
     display: flex;
@@ -335,17 +343,18 @@ li{
 .smolroleee{
     position: absolute;
     scale: 92%;
-    top: 480px;
+    top: 490px;
     left: 680px;
     cursor: pointer;
     transition: all 0.5s ease;
 }
 .smolroleee:hover{
-    scale: 105%;
+    scale: 102%;
 }
 .textooo{
     width: 240px;
     height: 106px;
+    
 }
 .mastertxtoo{
     color: rgba(0, 0, 0);
