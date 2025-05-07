@@ -571,7 +571,10 @@
     <a href="#" style="text-decoration: none; color: white;">🏠 Dashboard</a>
   </button>
  -->
- <%
+
+ 
+  <form action="DeleteProductUtil" method="POST">
+  <%
     String deleteStatus = (String) session.getAttribute("deleteStatus");
     if (deleteStatus != null) {
 %>
@@ -582,8 +585,6 @@
         session.removeAttribute("deleteStatus");  // Clear after showing once
     }
 %>
- 
-  <form action="DeleteProductUtil" method="POST">
     <table>
         <thead>
             <tr>
@@ -626,42 +627,34 @@
     <p>Manage all users in the system</p>
     <br>
 
-    <form action="" method="">
+    <form action="DeleteUserUtil" method="post">
+    
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>User Name</th>
             <th>Email</th>
-            <th>Role</th>
-            <th>Joined</th>
-            <th>Profile</th>
-            <th>Plans</th>
+            <th>PhoneNumber</th>
+            <th>D.O.B</th>
+			<th>Profile</th>
+            <th>Gender</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Sujal Parajuli</td>
-            <td>sujal@gmail.com</td>
-            <td><span class="role-admin">admin</span></td>
-            <td>Apr 19, 2025, 06:44 PM</td>
-            <td><span class="profile-yes">Yes</span></td>
-            <td>1</td>
-            <td class="actions">
-              <button type="submit" name="delete" value="Sujal" class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Yathartha</td>
-            <td>yathartha2024@gmail.com</td>
-            <td><span class="role-user">user</span></td>
-            <td>Apr 18, 2025, 03:19 PM</td>
-            <td><span class="profile-yes">Yes</span></td>
-            <td>0</td>
-            <td class="actions">
-              <button type="submit" name="delete" value="yathartha" class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
+           <c:forEach var="user" items="${adminUsers}">
+        <tr>
+          <td>${user.username}</td>
+          <td>${user.email}</td>
+          <td>${user.phoneNumber}</td> 
+          <td>${user.dateOfBirth}</td> 
+		  <td><span class="profile-yes">Yes</span></td>
+          <td>${user.gender}</td>
+          <td class="actions">
+            <button type="submit" name="delete" value="${user.username}" class="btn btn-delete">Remove</button>
+          </td>
+        </tr>
+      </c:forEach>
       
         </tbody>
       </table>

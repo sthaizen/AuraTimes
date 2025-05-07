@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.Auratimes.config.DbConfig;
 import com.Auratimes.model.ProductModel;
+import com.Auratimes.model.UserModel;
 
 public class AdminDashboardService {
 
@@ -38,5 +39,25 @@ public class AdminDashboardService {
         }
 
         return adminProducts;
+    }
+    public List<UserModel> getAllRegisteredUsers() {
+        List<UserModel> users = new ArrayList<>();
+        try (Connection con = DbConfig.getDbConnection()) {
+            String sql = "SELECT Username, Email, DateOfBirth, Gender, PhoneNumber FROM users";
+            PreparedStatement pst = con.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                UserModel user = new UserModel();
+                user.setUsername(rs.getString("Username"));
+                user.setEmail(rs.getString("Email"));
+                user.setDateOfBirth(rs.getString("DateOfBirth"));
+                user.setGender(rs.getString("Gender"));
+                user.setPhoneNumber(rs.getString("PhoneNumber"));
+                users.add(user);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return users;
     }
 }

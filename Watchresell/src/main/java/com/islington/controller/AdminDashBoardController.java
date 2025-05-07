@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.List;
+import com.Auratimes.model.UserModel;
 
 import com.Auratimes.model.ProductModel;
 import com.Auratimes.service.AdminDashboardService;
@@ -32,8 +33,12 @@ public class AdminDashBoardController extends HttpServlet {
             throws ServletException, IOException {
 
         AdminDashboardService service = new AdminDashboardService();
+        
         List<ProductModel> adminProducts = service.getAllAdminProducts(); // use new name
         request.setAttribute("adminProducts", adminProducts); // JSP expects "productList"
+        
+        List<UserModel> adminUsers = service.getAllRegisteredUsers();
+        request.setAttribute("adminUsers", adminUsers);
 
         request.getRequestDispatcher("/WEB-INF/pages/AdminDashBoard.jsp").forward(request, response);
     }

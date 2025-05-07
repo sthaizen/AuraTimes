@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Collection.css" />
     </head>
+    
     <body>
         <header>
          <!-- Navigation -->
@@ -39,7 +40,7 @@
             <h3 class="swarchby">Search By Refrences</h3>
             <div class="searchtab">
                 <input type="text" class="searchinput" placeholder="Search.." style="padding-left: 17px;">
-                <button class="buttonsearch">
+                <button class="buttonsearch" >
                     <p class="asasd" >Search</p>
                 </button>
             </div>

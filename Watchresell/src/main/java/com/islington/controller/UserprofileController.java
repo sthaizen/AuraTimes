@@ -58,7 +58,7 @@ public class UserprofileController extends HttpServlet {
             return;
         }
         if (!ValidationUtil.isAlphanumericStartingWithLetter(username)) {
-            request.setAttribute("status", "Username must start with a letter and be alphanumeric");
+            request.setAttribute("status", "Username not matching");
             dispatcher.forward(request, response);
             return;
         }
