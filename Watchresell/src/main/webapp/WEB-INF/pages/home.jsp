@@ -89,7 +89,7 @@
         </div>
         
         <!-- Video background -->
-        <video AUTOPLAY loop muted playsinline class="Video">
+        <video AUTOPLAY loop muted  class="Video">
             <source src="${pageContext.request.contextPath}/assets/Video/Rolexvid.mp4" type="video/mp4" />
         </video>
         <!-- Overlay Text -->

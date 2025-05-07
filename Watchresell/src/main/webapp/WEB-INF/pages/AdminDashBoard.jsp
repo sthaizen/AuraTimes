@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +64,7 @@
     .submit-btn {
   display: block;
   width: 100%;
-  background-color: #28a745;
+  background-color: #4D55CC;
   color: white;
   padding: 10px;
   font-size: 16px;
@@ -122,6 +124,88 @@
 .form-group input[type="file"]::file-selector-button:hover {
   background-color: #8990ea;
 }
+
+/*user css*/
+.user-container {
+ background-color: white;
+       padding: 30px;
+      border-radius: 10px;
+       max-width: 1300px;
+      margin: auto;
+       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-left: 330px;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
+
+    .user-container h2 {
+      color: #c084fc;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-dashboard {
+      background-color: #22c55e;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .role-user {
+      background-color: #3b82f6;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 0.85rem;
+    }
+
+    .role-admin {
+      background-color: #ef4444;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 0.85rem;
+    }
+
+    .profile-yes {
+      background-color: #22c55e;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    .btn-delete {
+      background-color:#ef4444;
+      margin-right: 0.5rem;
+      color: #fff;
+      
+    }
+
+    .btn-edit {
+      background-color: #3b82f6;
+      color: #fff;
+    }
+
+    .actions {
+      display: flex;
+    }
     </style>
 </head>
 
@@ -349,7 +433,7 @@
     <div class="cardBox">
         <div class="card">
             <div>
-                <div class="numbers">15,000</div>
+                <div class="numbers">10</div>
                 <div class="cardName">Daily Views</div>
             </div>
 
@@ -360,7 +444,7 @@
 
         <div class="card">
             <div>
-                <div class="numbers">999</div>
+                <div class="numbers">20</div>
                 <div class="cardName" style="width: 90px;">Sales</div>
             </div>
 
@@ -370,7 +454,7 @@
 
         <div class="card">
             <div>
-                <div class="numbers">30,000</div>
+                <div class="numbers">0</div>
                 <div class="cardName">Reviews</div>
             </div>
 
@@ -380,7 +464,7 @@
 
         <div class="card">
             <div>
-                <div class="numbers">$9,000</div>
+                <div class="numbers">Rs 0</div>
                 <div class="cardName">Revenue</div>
             </div>
 
@@ -428,12 +512,13 @@
         <!---for product section-->
     
 <div class="form-container" id="add-product-form">
-  <h2>Add Product</h2>
+  <h2>Add Products</h2>
+    
   <form action="${pageContext.request.contextPath}/AdminDashBoard" method="post" enctype="multipart/form-data">
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="product_id">Product ID</label>
       <input type="text" id="product_id" name="product_id" placeholder="Enter Product ID">
-    </div>
+    </div> -->
     <div class="form-group">
       <label for="product_name">Product Name</label>
       <input type="text" id="product_name" name="product_name" placeholder="Enter Product Name">
@@ -463,7 +548,100 @@
 </div>
     
     
+            <!---for product view and delete-->
 
+
+<div class="user-container">
+  <h2>Manage Products</h2>
+  <p>Manage all products in the system</p>
+  <br>
+  <!-- <button class="btn btn-dashboard">
+    <a href="#" style="text-decoration: none; color: white;">🏠 Dashboard</a>
+  </button>
+ -->
+  <form action="" method="POST">
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Watch Brand</th>
+                <th>Previous Bid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <c:forEach var="product" items="${adminProducts}">
+                <tr>
+                    <td>${product.product_Name}</td>
+                    <td>${product.description}</td>
+                    <td>$${product.product_Price}</td>
+                    <td>${product.watch_brand}</td>
+                    <td>$${product.previous_bid}</td>
+                    <td class="actions">
+                        <button type="submit" name="delete" value="${product.product_Name}" class="btn btn-delete">Delete</button>
+                        <button type="submit" name="edit" value="${product.product_Name}" class="btn btn-edit">Edit</button>
+                    </td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+</form>
+</div>
+
+            <!---end of for product view and delete-->
+
+
+            <!---for user view and delete-->
+    
+  <div class="user-container">
+    <h2>Manage Users</h2>
+    <p>Manage all users in the system</p>
+    <br>
+
+    <form action="" method="">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Joined</th>
+            <th>Profile</th>
+            <th>Plans</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sujal Parajuli</td>
+            <td>sujal@gmail.com</td>
+            <td><span class="role-admin">admin</span></td>
+            <td>Apr 19, 2025, 06:44 PM</td>
+            <td><span class="profile-yes">Yes</span></td>
+            <td>1</td>
+            <td class="actions">
+              <button type="submit" name="delete" value="Sujal" class="btn btn-delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Yathartha</td>
+            <td>yathartha2024@gmail.com</td>
+            <td><span class="role-user">user</span></td>
+            <td>Apr 18, 2025, 03:19 PM</td>
+            <td><span class="profile-yes">Yes</span></td>
+            <td>0</td>
+            <td class="actions">
+              <button type="submit" name="delete" value="yathartha" class="btn btn-delete">Delete</button>
+            </td>
+          </tr>
+      
+        </tbody>
+      </table>
+    </form>
+  </div>
    
 </body>
 

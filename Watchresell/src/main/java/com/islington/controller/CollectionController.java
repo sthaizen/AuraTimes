@@ -32,7 +32,7 @@ public class CollectionController extends HttpServlet {
         
         // Fetch all products from the service layer
         List<ProductModel> collectionList = collectionServices.getAllProducts();
-        
+       
         // Set the collection list to be accessed in JSP
         request.setAttribute("collectionList", collectionList);
         
