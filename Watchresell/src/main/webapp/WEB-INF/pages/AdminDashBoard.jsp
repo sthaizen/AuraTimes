@@ -108,6 +108,17 @@
   box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
 }
 
+.alert {
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+}
+
+
+
 /* Style the file input button text  */
 .form-group input[type="file"]::file-selector-button {
   padding: 8px 12px;
@@ -559,7 +570,19 @@
     <a href="#" style="text-decoration: none; color: white;">🏠 Dashboard</a>
   </button>
  -->
-  <form action="" method="POST">
+ <%
+    String deleteStatus = (String) session.getAttribute("deleteStatus");
+    if (deleteStatus != null) {
+%>
+    <div class="alert alert-success">
+        <%= deleteStatus %>
+    </div>
+<%
+        session.removeAttribute("deleteStatus");  // Clear after showing once
+    }
+%>
+ 
+  <form action="DeleteProductUtil" method="POST">
     <table>
         <thead>
             <tr>
@@ -581,6 +604,7 @@
                     <td>${product.watch_brand}</td>
                     <td>$${product.previous_bid}</td>
                     <td class="actions">
+                    <form action="DeleteProductUtil" method="POST">
                         <button type="submit" name="delete" value="${product.product_Name}" class="btn btn-delete">Delete</button>
                         <button type="submit" name="edit" value="${product.product_Name}" class="btn btn-edit">Edit</button>
                     </td>
