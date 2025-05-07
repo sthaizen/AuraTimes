@@ -528,7 +528,7 @@
   <form action="${pageContext.request.contextPath}/AdminDashBoard" method="post" enctype="multipart/form-data">
     <!-- <div class="form-group">
       <label for="product_id">Product ID</label>
-      <input type="text" id="product_id" name="product_id" placeholder="Enter Product ID">
+      <input type="text" id="product_id" name="product_id" placeholder="Enter Product ID">batman
     </div> -->
     <div class="form-group">
       <label for="product_name">Product Name</label>
