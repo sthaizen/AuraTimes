@@ -89,14 +89,14 @@
         </div>
         
         <!-- Video background -->
-        <video AUTOPLAY loop muted  class="Video">
-            <source src="${pageContext.request.contextPath}/assets/Video/Rolexvid.mp4" type="video/mp4" />
+        <video AUTOPLAY loop muted  preload="auto" class="Video">
+            <source src="${pageContext.request.contextPath}/assets/Video/Nextvid.mp4" type="video/mp4" />
         </video>
         <!-- Overlay Text -->
         <div style="position: relative; top: -30px; left: 12px;">
             <p class="Newcoll">NEW COLLECTION OF 2025</p>
             <p class="Thesub">THE SUBMARINER SERIES</p>
-            <a href="#" class="Launchtheexp">
+            <a href="Collection" class="Launchtheexp">
                 <p class="Launchthe">+ Launch the experience</p>
                 
             </a>

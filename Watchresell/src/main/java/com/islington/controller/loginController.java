@@ -74,7 +74,9 @@ public class loginController extends HttpServlet {
 
                     // Redirect to the home page or dashboard based on role
                     if ("admin".equals(role)) {
-                        dispatcher = request.getRequestDispatcher("/WEB-INF/pages/AdminDashBoard.jsp");
+                        response.sendRedirect("AdminDashBoard"); // Redirects to the servlet
+                        return; // prevent further execution
+                    
                     } else {
                         dispatcher = request.getRequestDispatcher("/WEB-INF/pages/home.jsp");
                     }

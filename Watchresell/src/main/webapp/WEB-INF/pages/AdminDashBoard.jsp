@@ -8,7 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Times Admin Dashboard</title>
+    <title> Admin Dashboard</title>
+    <link rel="icon" href="${pageContext.request.contextPath}/assets/Logo/Finallogo.png" type="image/x-icon">
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/AdminDashBoard.css" />
     <style>
@@ -604,7 +605,7 @@
                     <td>${product.watch_brand}</td>
                     <td>$${product.previous_bid}</td>
                     <td class="actions">
-                    <form action="DeleteProductUtil" method="POST">
+                  
                         <button type="submit" name="delete" value="${product.product_Name}" class="btn btn-delete">Delete</button>
                         <button type="submit" name="edit" value="${product.product_Name}" class="btn btn-edit">Edit</button>
                     </td>
