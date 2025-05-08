@@ -45,5 +45,28 @@ public class CollectionServices {
         }
         return products;
     }
+    public List<ProductModel> getProductsByBrand(String brand) {
+        List<ProductModel> products = new ArrayList<>();
+        try (Connection con = DbConfig.getDbConnection()) {
+            String sql = "SELECT * FROM product WHERE watch_brand = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, brand);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()) {
+                ProductModel product = new ProductModel();
+                product.setProduct_Name(rs.getString("product_name"));
+                product.setDescription(rs.getString("description"));
+                product.setProduct_Price(rs.getDouble("product_price"));
+                product.setProduct_Img(rs.getString("product_img"));
+                product.setWatch_brand(rs.getString("watch_brand"));
+                product.setPrevious_bid(rs.getInt("previous_bid"));
+                products.add(product);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
 }
 

@@ -195,7 +195,13 @@ transform: scaleX(1);
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
+    text-decoration: none;
+    
 }
+   .txtoo:hover {
+        color: #000040;
+        text-decoration: underline;
+    }
 li{
     list-style: none;
     text-decoration: none;
@@ -478,6 +484,5 @@ li{
     flex-direction: row;
     justify-content: space-between;
 }
-
 
 

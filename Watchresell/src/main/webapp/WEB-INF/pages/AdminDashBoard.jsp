@@ -244,11 +244,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="home">
                         <span class="icon">
                             <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/home.png" alt="logo" style="width: 30px;"></div>
                         </span>
-                        <span class="title">Dashboard</span>
+                        <span class="title">Home</span>
                     </a>
                 </li>
 
