@@ -157,6 +157,202 @@ transform: scaleX(1);
     justify-content: center;
     align-items: center;
 }
+/* Hidden Menu Styles */
+Insidemenu{
+    width: 751px;
+    height: 1168px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.89) 0%, rgba(36, 36, 36, 0.89) 100%);
+    backdrop-filter: blur(6.6px);
+    }
+    .Insidemenu ul li a{
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 47px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration: none;
+        list-style: none;
+    }
+    .insidetext{
+        width: 524px;
+        height: 401px;
+        padding: 75px;
+        margin-top: 10px;
+        position: relative;
+        right: 30px;
+        
+    
+    }
+    .Vector1{
+    display: flex;
+    padding: 56px;
+    position: relative;
+    top: -155px;
+    }
+    .Book{
+    color: rgb(255, 255, 255);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 20px;
+    display: flex;
+    font-weight: 500;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    position: relative;
+    top: -180px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+    }
+    .Book1{
+    color: rgba(255, 255, 255);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    position: relative;
+    top: -250px;
+    left: 455px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+    
+    }
+    .Bookholder{
+    width: 628px;
+    height: 71px;
+    flex-shrink: 0;
+    }
+    .Vector2{
+    display: flex;
+    padding: 56px;
+    position: relative;
+    top: -160px;
+    }
+    .Bookholder2{
+    width: 401px;
+    height: 110px;
+    
+    }
+    .pptt1 {
+    color: rgba(255, 255, 255, 0.80);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none;
+    
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: -65px; /* replace top:-200px with controlled spacing */
+    padding-left: 70px;
+    position: relative;
+    top: -150px;
+    }
+    
+    .pptt2 {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 80%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+    
+    width: 200px;
+    
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: -65px; /* replace top:-200px with controlled spacing */
+    padding-left: 500px;
+    position: relative;
+    top: -22px;
+    right: 100px;
+    }
+    
+    
+    
+    #menuBar {
+    padding: 20px;
+    background: #000;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10000;
+    }
+    
+    .page-content {
+    padding: 100px 20px;
+    }
+    /* INSIDE MENU STYLES */
+    .Insidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.89), rgba(36, 36, 36, 0.89));
+    backdrop-filter: blur(6.6px);
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 110;
+    pointer-events: none;
+    }
+    
+    .Insidemenu.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    }
+    
+    #cross {
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+    }
+    
+    .Insidemenu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    }
+    
+    .Insidemenu li {
+    margin-bottom: 0px;
+    }
+    
+    .Insidemenu a {
+    color: white;
+    text-decoration: none;
+    }
+    
+    .social-icons{
+    width: 156px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-top: 130px;
+    }
 .searchtab{
     padding-top: 30px;
 }
@@ -487,5 +683,200 @@ li{
     flex-direction: row;
     justify-content: space-between;
 }
-
+/* Hidden Menu Styles */
+Insidemenu{
+    width: 751px;
+    height: 1168px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.89) 0%, rgba(36, 36, 36, 0.89) 100%);
+    backdrop-filter: blur(6.6px);
+    }
+    .Insidemenu ul li a{
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 47px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration: none;
+        list-style: none;
+    }
+    .insidetext{
+        width: 524px;
+        height: 401px;
+        padding: 75px;
+        margin-top: 10px;
+        position: relative;
+        right: 30px;
+        
+    
+    }
+    .Vector1{
+    display: flex;
+    padding: 56px;
+    position: relative;
+    top: -155px;
+    }
+    .Book{
+    color: rgb(255, 255, 255);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 20px;
+    display: flex;
+    font-weight: 500;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    position: relative;
+    top: -180px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+    }
+    .Book1{
+    color: rgba(255, 255, 255);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    position: relative;
+    top: -250px;
+    left: 455px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+    
+    }
+    .Bookholder{
+    width: 628px;
+    height: 71px;
+    flex-shrink: 0;
+    }
+    .Vector2{
+    display: flex;
+    padding: 56px;
+    position: relative;
+    top: -160px;
+    }
+    .Bookholder2{
+    width: 401px;
+    height: 110px;
+    
+    }
+    .pptt1 {
+    color: rgba(255, 255, 255, 0.80);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none;
+    
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: -65px; /* replace top:-200px with controlled spacing */
+    padding-left: 70px;
+    position: relative;
+    top: -150px;
+    }
+    
+    .pptt2 {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 80%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+    
+    width: 200px;
+    
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: -65px; /* replace top:-200px with controlled spacing */
+    padding-left: 500px;
+    position: relative;
+    top: -22px;
+    right: 100px;
+    }
+    
+    
+    
+    #menuBar {
+    padding: 20px;
+    background: #000;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10000;
+    }
+    
+    .page-content {
+    padding: 100px 20px;
+    }
+    /* INSIDE MENU STYLES */
+    .Insidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.89), rgba(36, 36, 36, 0.89));
+    backdrop-filter: blur(6.6px);
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 110;
+    pointer-events: none;
+    }
+    
+    .Insidemenu.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    }
+    
+    #cross {
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+    }
+    
+    .Insidemenu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    }
+    
+    .Insidemenu li {
+    margin-bottom: 0px;
+    }
+    
+    .Insidemenu a {
+    color: white;
+    text-decoration: none;
+    }
+    
+    .social-icons{
+    width: 156px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-top: 130px;
+    }
 
