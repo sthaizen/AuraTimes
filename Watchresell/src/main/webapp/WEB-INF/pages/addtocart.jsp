@@ -19,7 +19,8 @@
             <a href="userprofile" class="Menu"><%= session.getAttribute("Username")%></a> 
             </div>
            
-            <div class="logo" style="position: relative; left: 210px;"><a href="home.html"><img src="${pageContext.request.contextPath}/assets/PNG/black logo.png" alt="Logo" /></div></a>
+            <div class="logo" style="position: relative; left: 210px;">
+            <a href="home.html"><img src="${pageContext.request.contextPath}/assets/img/logosada.png" alt="Logo" /></div></a>
             <div class="inner-main-nav">
                 <ul>
                     <li id="coll"><a href="#">Collections</a></li>

@@ -40,7 +40,7 @@
                     <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"><a class="Menu">Menu</a></div>
                 </div>
                 <div class="logo" style="position: relative; left: 210px;">
-                    <a href="home.html"><img src="${pageContext.request.contextPath}/assets/PNG/black logo.png" alt="Logo" /></a>
+                    <a href="home.html"><img src="${pageContext.request.contextPath}/assets/img/logosada.png" alt="Logo" /></a>
                 </div>
                 <div class="inner-main-nav">
                     <ul>
@@ -115,6 +115,7 @@
         </div>
 <div class="fullbody">
         <div class="parent">
+        
             <div class="productimgcont">
                 <div class="productimage">
                     <img src="${pageContext.request.contextPath}/uploads/${product.product_Img}" alt="image" class="productimage1">

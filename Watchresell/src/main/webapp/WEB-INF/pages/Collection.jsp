@@ -40,7 +40,8 @@
             <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"><a class="Menu">Menu</a></div>
             </div>
            
-            <div class="logo" style="position: relative; left: 210px;"><a href="home.html"><img src="${pageContext.request.contextPath}/assets/PNG/black logo.png" alt="Logo" /></div></a>
+            <div class="logo" style="position: relative; left: 210px;">
+            <a href="home.html"><img src="${pageContext.request.contextPath}/assets/img/logosada.png" alt="Logo" /></div></a>
             <div class="inner-main-nav">
                 <ul>
                     <li id="coll"><a href="#">Collections</a></li>
