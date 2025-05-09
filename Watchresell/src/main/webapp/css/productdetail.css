@@ -1,0 +1,606 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Maname');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mandali&family=Manrope:wght@200..800&display=swap');
+*{ 
+margin: 0;
+/* scroll-behavior: smooth; */
+
+} 
+
+body {
+
+/* box-sizing: border-box; */
+overflow-x: hidden;
+
+}
+.main-nav {
+width: 100%;
+z-index: 100;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 60px;
+color: rgb(0, 0, 0);
+position: absolute; /* Allows positioning inside normal flow */
+}
+
+
+.menu-bar img{
+height: 20px;
+
+}
+.logo img {
+height: 37px; /* adjust as needed */
+cursor: pointer;
+}
+
+.logo {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.inner-main-nav ul {
+display: flex;
+gap: 30px;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.inner-main-nav ul li a {
+color: #000000;
+font-family: 'Manrope', sans-serif;
+font-size: 19px;
+font-weight: bold;
+text-decoration: none;
+transition: color 0.3s ease;
+padding: 20px;
+opacity: 70%;
+position: relative;
+left: -120px;
+}
+.Menu{
+text-decoration: none;
+color: #000000;
+opacity: 70%;
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+font-weight: bold;
+list-style: none;
+}
+#coll {
+position: relative; 
+
+}
+
+#coll a::before {
+content: '';
+position: absolute;
+bottom: 0px;
+left: 0;
+width: 100%;
+height: 1px;
+background-color: rgb(0, 0, 0);
+transform: scaleX(0);
+transform-origin: right;
+transition: transform 0.3s ease;
+}
+
+#coll a:hover::before {
+transform: scaleX(1);
+scale: 102%;
+}
+
+.backbtn{
+    color: #151515;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    padding-left: 80px;
+    padding-top: 18px;
+}
+.parent {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.productimgcont {
+    width: 867px;
+    height: 822px;
+    margin-left: 83px;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+}
+
+.productimage1 {
+    width: 600px;
+    height: 830px;
+    aspect-ratio: 3/4;
+}
+.line{
+    padding-top: 10px;
+    
+}
+.productname{
+    color: #000040;
+    font-family: Maname;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.productdescription{
+    color: #919191;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 7px;
+}
+.productdetail{
+    padding-left: 43px;
+}
+.buy{
+    color: #919191;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.price{
+    color: #000;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.bid{
+    color: #919191;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.oldprice{
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.currentprice{
+    width: 251px;
+    height: 82px;
+    flex-shrink: 0;
+}
+.previousbid{
+    width: 146px;
+    height: 60px;
+    flex-shrink: 0;
+}
+.sdasd {
+    display: flex;
+    flex-direction: row;
+    padding-left: 35px;
+}
+
+.pices {
+    display: flex;
+    flex-direction: row; 
+    gap: 40px; 
+}
+
+.currentprice,
+.previousbid {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.buttonsaa{
+    padding-left: 52px;
+    padding-top: 22px;
+
+}
+.addtocart {
+    width: 568px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #FFF;               /* Initial background: white */
+    color: #000;                    /* Text color: black */
+    border: 1.5px solid #2a2a2a;         /* Black border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  
+    cursor: pointer;
+    transition: all 0.3s ease;      
+}
+
+.addtocart img {
+    height: 30px;
+    width: auto;
+    filter: invert(1);             
+    transition: filter 0.3s ease;
+}
+
+.add {
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.addtocart:hover {
+    background: #292A2C;            
+    border: none;                   
+}
+
+.addtocart:hover .add {
+    color: #FFF;                   
+}
+
+.addtocart:hover img {
+    filter: invert(0);             
+}
+.blasasda{
+    display: flex;
+    flex-direction: row;
+    padding-left: 35px;
+}
+.asdasd{
+    color: #919191;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.prisghace1{
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.yrcon,
+.inloc {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 54px;
+    padding-top: 25px;
+}
+.p2{
+    padding-top: 16px;
+}
+.detailtxt{
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 16px;
+    padding-left: 57px;
+}
+.refrescessess{
+    width: 173px;
+    height: 83px;
+    border-radius: 9px;
+    border: 1.5px solid #C9C9C9;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dailclr{
+    width: 137px;
+    height: 83px;
+    border-radius: 9px;
+    border: 1.5px solid #C9C9C9;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.casesize{
+    width: 143px;
+    height: 83px;
+    border-radius: 9px;
+    border: 1.5px solid #C9C9C9;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boxestop{
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+    gap: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.strap{
+    width: 195px;
+    height: 83px;
+    border-radius: 9px;
+    border: 1.5px solid #C9C9C9;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.boxbutton{
+    display: flex;
+    padding-left: 77px;
+    padding-top: 19px;
+}
+.toptxttaa{
+    color: #919191;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.bottotexta{
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.casdasd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: -200px;
+}
+
+.boxestop {
+    display: flex;
+    flex-direction: row;
+}
+
+.sellernot{
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 25px;
+    padding-left: 57px;
+}
+.perfectoo{
+    color: #919191;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 12px;
+    padding-left: 57px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  .modal-overlay.active {
+    display: flex;
+  }
+  
+  .modal-box {
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(180deg, rgba(36, 36, 36, 0.23) 0%, rgba(0, 0, 0, 0.23) 100%);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    color: white;
+  }
+  
+  .modal-title {
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .modal-desc {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .modal-btn {
+    width: 126px;
+    height: 36px;
+    border-radius: 12px;
+    background: #444;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .modal-btn:hover {
+    opacity: 0.85;
+  }
+  .asdasd1{
+    color: #000040;
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .asdasdas{
+    color: #000040;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .sdasdasd3qfas{
+    width: 1364px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 143px;
+    padding-top: 23px;
+  }
+  .containe1{
+    width: 1227px;
+    height: auto;
+    display: flex;
+    justify-content: center;  
+    margin: 0 auto; 
+    margin-top: 100px;
+      
+}
+.watch1{
+    background: #F6F6F6;
+    width: 377px;
+    height: 570px;
+}
+.astlayer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1227px;
+    height: 570px;
+}
+.imagecontainer{
+    width: 311px;
+    height: 415px;
+    margin-top: 22px;
+    margin-left: 33px;
+    
+}
+.imagess{
+    display: flex;
+    width: 321px;
+    height: 421px;
+    aspect-ratio: 271/371;
+    justify-content: center;  
+    margin: 0 auto;
+    /* padding-top: 20px;  */
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.imagess:hover{
+    transform: scale(1.1);
+}
+
+.modelname{
+    color: #000040;
+    font-family: Maname;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.brandname{
+    color: #454545;
+    font-family: Maname;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+.imagetext{
+    display: flex;
+    justify-content: center;  
+    margin: 0 auto;
+
+}
+.insideshit{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.astlayer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1227px;
+    height: 570px;
+    padding-top: 32px;
+}
+.rendomimg{
+    width: 1728px;
+    height: 799px;
+    flex-shrink: 0;
+    background: #FAFAFA;
+  
+}
+.confi{
+    color: #000040;
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.osfb{
+    display: flex;
+    padding-top: 48px;
+    padding-left: 115px;
+}

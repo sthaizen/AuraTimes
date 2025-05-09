@@ -246,6 +246,9 @@ li{
 }
 .imagess{
     display: flex;
+    width: 321px;
+    height: 421px;
+    aspect-ratio: 271/371;
     justify-content: center;  
     margin: 0 auto;
     /* padding-top: 20px;  */

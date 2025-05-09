@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+    pageEncoding="UTF-8"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -54,47 +54,42 @@
         <li><a class="txtoo" href="filterProduct?brand=Jaeger‑LeCoultre">Jaeger‑LeCoultre</a></li>
         <li><a class="txtoo" href="filterProduct?brand=Cartier">Cartier</a></li>
         <li><a class="txtoo" href="filterProduct?brand=Rolex">Rolex</a></li>
-   
     </ul>
 </div>
-<!-- which brand is selected Section -->
 
+<!-- Display filtered brand -->
 <c:if test="${not empty param.brand}">
   <p style="margin-left: 95px;  font-weight: 600; font-family: Manrope; color: #000040; margin-top: 20px;">Filtered by: ${param.brand}</p>
 </c:if>
-        
 
-
-        <div class="containe1">
-            <div class="insideshit">
-               
-
-                <!-- Display products -->
-                <c:forEach var="product" items="${collectionList}">
-                    <div class="watch1">
-                        <div>
-                            <div class="imagecontainer">
-                                
-                                <img src="${pageContext.request.contextPath}/uploads/${product.product_Img}" class="imagess" alt="Product Image">
-                            </div>
-                            <div class="imagetext">
-                                <a href="#" style="text-decoration: none;">
-                                    <h2 class="modelname" >${product.product_Name}</h2>
-                                    <h3 class="brandname">${product.watch_brand}</h3>
-                            
-                                </a>
-                            </div>
-                        </div>
+<div class="containe1">
+    <div class="insideshit">
+        <!-- Display products -->
+        <c:forEach var="product" items="${collectionList}">
+            <div class="watch1">
+                <div>
+                    <div class="imagecontainer">
+                        <a href="${pageContext.request.contextPath}/productdetail?productName=${product.product_Name}">
+                            <img src="${pageContext.request.contextPath}/uploads/${product.product_Img}" class="imagess" alt="Product Image">
+                        </a>
                     </div>
-                </c:forEach>
-                
-                <c:if test="${empty collectionList}">
-    <p style="text-align:center; font-size: 18px;">No products found.</p>
-</c:if>
-                
-                
+                    <div class="imagetext">
+                        <a href="${pageContext.request.contextPath}/productdetail?productName=${product.product_Name}" style="text-decoration: none;">
+                            <h2 class="modelname">${product.product_Name}</h2>
+                            <h3 class="brandname">${product.watch_brand}</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </c:forEach>
+        
+        <c:if test="${empty collectionList}">
+            <p style="text-align:center; font-size: 18px;">No products found.</p>
+        </c:if>
+        
+    </div>
+    
+    </div>
 
         <div style="display: flex; padding-top: 117px;">
             <!-- Additional content for Moon-Watch -->
@@ -123,7 +118,6 @@
                     </div>
                 </div>
             </div> 
-            
-        </div>
-    </body>
+</div>
+</body>
 </html>
