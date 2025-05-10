@@ -809,3 +809,460 @@ Insidemenu{
     position: relative;
     top: -100px;
 }
+
+.description{
+    display: flex;
+    padding-top: 54px;
+}
+
+
+
+
+.descriptt{
+    width: 1161px;
+    height: 645px;
+    background: #F9F9F9;
+    
+}
+.dasdawrfd{
+    color: #C40D2E;
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 18.88px;
+    padding-top: 108px;
+    padding-left: 96px;
+}
+.thingstowrite{
+    width: 580px;
+    height: 162px;
+    color: #666;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-top: 23px;
+    padding-left: 96px;
+
+}
+.productdetaa{
+    color: #C40D2E;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.8px;
+    padding-top: 28px;
+    padding-left: 96px;
+}
+.detll{
+    color: #666;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 9px;
+    
+}
+.testoooxda{
+    display: flex;
+}
+.prdimhhs{
+    
+    padding-left: 143px;
+    padding-top: 53px;
+    
+}
+.biitther{
+    scale: 120%;
+    padding-left: 160px;
+    padding-top: 90px;
+}
+.twoimg{
+    display: flex;
+    gap: 23px;
+    padding-left: 13px;
+    position: relative;
+    top: -150px;
+
+}
+/* FOOTERRRR */
+.footerbody{
+    width: 1728px;
+    height: 443px;
+    flex-shrink: 0;
+    background: #ffffff;
+
+}
+.follow{
+    color: rgba(0, 0, 0, 0.69);
+    font-family: Mandali;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 13px;
+}
+.icons{
+    width:  237px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+.logos{
+    padding-left: 132px;
+    padding-top: 109px;
+}
+.maintxt{
+    color: #2A2A2A;
+    font-family: Mandali;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.secondtxt{
+    color: #2A2A2A;
+    font-family: Mandali;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.footertxt{
+    width: 1109px;
+    height: 380px;
+    position: relative;
+    top: -250px;
+    left: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Hidden Menu Styles */
+Insidemenu{
+    width: 751px;
+    height: 1168px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.89) 0%, rgba(36, 36, 36, 0.89) 100%);
+    backdrop-filter: blur(6.6px);
+    }
+    .Insidemenu ul li a{
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 47px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration: none;
+        list-style: none;
+    }
+    .insidetext{
+        width: 524px;
+        height: 401px;
+        padding: 75px;
+        margin-top: 10px;
+        position: relative;
+        right: 30px;
+        
+    
+    }
+    .Vector1{
+    display: flex;
+    padding: 56px;
+    position: relative;
+    top: -155px;
+    }
+    .Book{
+    color: rgb(255, 255, 255);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 20px;
+    display: flex;
+    font-weight: 500;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    position: relative;
+    top: -180px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+    }
+    .Book1{
+    color: rgba(255, 255, 255);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    position: relative;
+    top: -250px;
+    left: 455px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+    
+    }
+    .Bookholder{
+    width: 628px;
+    height: 71px;
+    flex-shrink: 0;
+    }
+    .Vector2{
+    display: flex;
+    padding: 56px;
+    position: relative;
+    top: -160px;
+    }
+    .Bookholder2{
+    width: 401px;
+    height: 110px;
+    
+    }
+    .pptt1 {
+    color: rgba(255, 255, 255, 0.80);
+    opacity: 80%;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    list-style: none;
+    
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: -65px; /* replace top:-200px with controlled spacing */
+    padding-left: 70px;
+    position: relative;
+    top: -150px;
+    }
+    
+    .pptt2 {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 80%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+    
+    width: 200px;
+    
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: -65px; /* replace top:-200px with controlled spacing */
+    padding-left: 500px;
+    position: relative;
+    top: -22px;
+    right: 100px;
+    }
+    
+    
+    
+    #menuBar {
+    padding: 20px;
+    background: #000;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10000;
+    }
+    
+    .page-content {
+    padding: 100px 20px;
+    }
+    .thirdcard{
+        width: 1729px;
+        height: 1080px;
+        flex-shrink: 0;
+        background: #F8F8F8;
+        
+    }
+    
+    .parag1{
+        width: 1483px;
+        align-items: center;
+        color: rgba(0, 0, 0);
+        opacity: 70%;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-top: 10px;
+        
+    }
+    
+    .textoomoon1{
+        width: 1483px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 95px;
+        padding-left: 131px;
+    }
+    
+    
+    .handgmt{
+        scale: 100%;
+        position: absolute;
+        top: 270px;
+        left: 170px;
+    }
+    .secondvid{
+        position: absolute;
+        top: -0px;
+        left: 640px;
+    }
+    .smolroleee{
+        position: absolute;
+        top: 480px;
+        left: 650px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+    .smolroleee:hover{
+        scale: 105%;
+    }
+    .textooo{
+        width: 240px;
+        height: 106px;
+    }
+    .mastertxtoo{
+        color: rgba(0, 0, 0);
+        opacity: 70%;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .transparntoo{
+        color: rgba(0, 0, 0, 0.36);
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-top: 9px;
+    }
+    .classooo{
+        color: rgba(0, 0, 0);
+        opacity: 70%;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-top: 5px;
+    }
+    .shopnow{
+        color: rgba(0, 0, 0);
+        opacity: 70%;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-top: 19px;
+        padding-left: 30px;
+    }
+    .textooo{
+        position: absolute;
+        top: 530px;
+        left: 870px;
+    }
+    .cartimg{
+        position: relative;
+        top: -20px;
+    
+    }
+    .vector3{
+        position: relative;
+        top: -10px;
+        right: 20px;
+    }
+    .textooo a{
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    .Gmtfinalvid{
+        position: relative;
+        top: 750px;
+    
+    }
+    .scroll{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .scrollarrow{
+        position: relative;
+        top: 630px;
+        left: 690px;
+        cursor: pointer;
+    }
+    .animatearrow img {
+        position: relative;
+        top: 300px;
+        left: 130px;
+        scale: 70%;
+        animation: arrowFloat 2s ease-in-out infinite;
+      }
+      
+      @keyframes arrowFloat {
+        0% {
+          transform: translateY(-10px);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+      .logoasd{
+        position: absolute;
+        top: -11px;
+        left: 80px;
+        cursor: pointer;
+      }
+      .symbol{
+        color: rgba(196, 14, 46);
+        opacity: 70%;
+        font-family: "IBM Plex Sans JP";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .reoelcxasd{
+        position: relative;
+        top: -70px;
+    }
+    

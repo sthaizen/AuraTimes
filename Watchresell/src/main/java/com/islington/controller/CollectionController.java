@@ -29,11 +29,9 @@ public class CollectionController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        // Fetch all products from the service layer
-        List<ProductModel> collectionList = collectionServices.getAllProducts();
        
-        // Set the collection list to be accessed in JSP
+        List<ProductModel> collectionList = collectionServices.getAllProducts();
+
         request.setAttribute("collectionList", collectionList);
         
         // Forward the request to the Collection.jsp page

@@ -110,7 +110,7 @@
                 <h3 class="backbtn">< Back</h3>
             </a>
             <div>
-                <img src="${pageContext.request.contextPath}/assets/PNG/secondlong.png" style="padding-left: 81px; padding-top: 19px;">
+                <img src="${pageContext.request.contextPath}/assets/PNG/secondlong.png" style="padding-left: 61px; padding-top: 19px;">
             </div>
         </div>
 <div class="fullbody">
@@ -215,13 +215,148 @@
         <div>
             <img src="${pageContext.request.contextPath}/assets/PNG/secondlong.png" style="padding-left: 81px; padding-top: 9px;">
         </div>
-        <div class="rec">
-            <div class="sdasdasd3qfas"> 
-                <h1 class="asdasd1">Recommendation</h1>
-                <a href="#" class="asdasdas">View All</a>
+       <div class="biitther">
+    <div class="description" data-aos="fade-up">
+        <div class="descriptt">
+            <div class="testoooxda">
+                <div class="d1">
+                    <h1 class="dasdawrfd">DESCRIPTION</h1>
+                    <img src="${pageContext.request.contextPath}/assets/PNG/redline.png" style="padding-left: 96px; padding-top: 9px;">
+                    <h3 class="thingstowrite"> ${product.description}</h3>
+                    <h1 class="productdetaa">Product Detail</h1>
+                    <ul style="padding-left: 126px;">
+                        <li class="detll">Durable stainless steel case</li>
+                        <li class="detll">Water-resistant up to 50 meters</li>
+                        <li class="detll">Scratch-resistant glass</li>
+                        <li class="detll">Suitable for formal and casual wear</li>
+                    </ul>
+                </div>
+                <div class="prdimhhs" >
+                    <img src="${pageContext.request.contextPath}/assets/img/miniclocks.png" style="width: 527px;height: 540px;">
+                </div>
+
             </div>
         </div>
-       </div>
+    </div>
+</div>
+
+</div>
+<div class="twoimg" data-aos="fade-up">
+    <img src="${pageContext.request.contextPath}/assets/img/smolomega1.png" style="width: 554px; height: 666px;">
+    <img src="${pageContext.request.contextPath}/assets/img/bigmoega1.png" style="width: 1086px; height: 578px; padding-top: 50px;">
+
+</div> 
+<div class="reoelcxasd">
+
+
+<div class="thirdcard" style="position: relative; z-index: 310; " data-aos="fade-up">
+    <div class="textoomoon1">
+        <h1 class="symbol">THE GMT-WATCHES</h1>
+        <h3 class="parag1">Discover this distinctive GMT watch edition, inspired by the dynamic spirit of world travelers. Accented with bold dual-time indicators and a striking red GMT hand, the design is both functional and iconic. The dial features a refined first for this collection’s signature face.</h3>
+    </div>
+    <div>
+        <div class="handgmt">
+            <img src="${pageContext.request.contextPath}/assets/img/handonpepsiGMT.png">
+            <div>
+                <video AUTOPLAY loop muted playsinline src="${pageContext.request.contextPath}/assets/Video/secondvid.mp4" type="video/mp4" class="secondvid"></video>
+            </div>
+            <div class="buyrolee">
+                <a href=""><img src="${pageContext.request.contextPath}/assets/PNG/Smolpng.png" alt="" class="smolroleee"></a>
+                <div class="textooo" style="cursor: pointer;">
+                    <a href="">
+                        <h1 class="mastertxtoo">THE ROLEX GMT-MASTER </h1>
+                    </a>
+                    <a href="">
+                        <h1 class="mastertxtoo">BATMAN, 124536LB</h1>
+                    </a>
+                    <h3 class="transparntoo">40 mm, White Gold</h3>
+                    <a href="">
+                        <h2 class="classooo">USD $14,000</h2>
+                    </a>
+                    <a href="">
+                        <h3 class="shopnow">Shop Now</h3>
+                    </a>
+                    <a href="" class="cartimg"> <img src="${pageContext.request.contextPath}/assets/PNG/Cartsml.png" alt=""></a>
+                    <img src="${pageContext.request.contextPath}/assets/PNG/vector3.png" class="vector3">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+</div>
+
+ <footer>
+            <img src="${pageContext.request.contextPath}/assets/img/1st footer.png" style="position: relative; top: -50px;">
+            <div class="footerbody">
+                <div class="logos">
+                    <img src="${pageContext.request.contextPath}/assets/Logo/bigblacklogo.png" >
+                    <p class="follow">Follow us on</p>
+                
+                <div class="icons">
+                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/facebook.png" alt=""></a>
+                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/twitter.png" alt=""></a>
+                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/youtube.png" alt=""></a>
+                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/github.png" alt=""></a>
+
+                </div>
+            </div>
+            <div class="footertxt" >
+            <div class="Customer">
+                <h1 class="maintxt">Customer care</h1>
+                <h3 class="secondtxt">Purchase policy</h3>
+                <h3 class="secondtxt">Return & Refund Policy</h3>
+                <h3 class="secondtxt">Deposit & Payment Policy</h3>
+                <h3 class="secondtxt">Shipping & Delivery Policy</h3>
+                <h3 class="secondtxt">Privacy policy</h3>
+                <h3 class="secondtxt">Terms and Service</h3>
+            </div>
+            <div class="Quicklinks">
+                <h1 class="maintxt">Quick links</h1>
+                <h3 class="secondtxt">Sell your watches</h3>
+                <h3 class="secondtxt">Contact us</h3>
+                <h3 class="secondtxt">Warranty Information</h3>
+                <h3 class="secondtxt">About us</h3>
+                <h3 class="secondtxt">Privacy policy</h3>
+                <h3 class="secondtxt">Careers</h3>
+            </div>
+            <div class="ADDinfo">
+                <h1 class="maintxt">Additional Information</h1>
+                <h3 class="secondtxt">Care for your watch</h3>
+                <h3 class="secondtxt">Repairs & Services</h3>
+                <h3 class="secondtxt">Customer Reviews</h3>
+                <h3 class="secondtxt">Security & Safety</h3>
+            </div>
+            <div class="Auratimes">
+                <h1 class="maintxt">Aura Times</h1>
+                <h3 class="secondtxt">Himalayan Tea House</h3>
+                <h3 class="secondtxt">Boudhanath Stupa Marg</h3>
+                <h3 class="secondtxt">Kathmandu 44600</h3>
+                <h3 class="secondtxt">Nepal</h3>
+                <h3 class="secondtxt">+977-9765588956</h3>
+                <h3 class="secondtxt">Everest Brew Co.</h3>
+                <h3 class="secondtxt">Thamel</h3>
+                <h3 class="secondtxt">Kathmandu 44600</h3>
+                <h3 class="secondtxt">Nepal</h3>
+            </div>
+            <div class="Members">
+                <h1 class="maintxt">Members</h1>
+                <h3 class="secondtxt">Sujal</h3>
+                <h3 class="secondtxt">Yathartha</h3>
+                <h3 class="secondtxt">Shakshim</h3>
+                <h3 class="secondtxt">Niran</h3>
+                <h3 class="secondtxt">Khoi ko xa</h3>
+            </div>
+
+        </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+       
 
       
 
