@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,28 +58,31 @@
                     to your door at no extra cost.</h3>
                     <h1 class="help111">Need Help?</h1>
             </div>
-            <!-- <div class="itemtobeadded">
-                <div>
-                <img src="${pageContext.request.contextPath}/assets/PNG/adcross.png" style="padding-top: 59px;"></div>
-                <div style="padding-left: 25px; padding-top: 24px;">
-                <div class="Imageaauna">
+            
+            <c:if test="${empty cartItems}">
+		        <p>Your cart is empty.</p>
+		    </c:if>
+             <c:forEach var="item" items="${cartItems}">
+				    <div class="itemtobeadded">
+				        <div class="iteminfo">
+				            <div class="Watchname">
+				                <p class="watchnametobegen">${item.productName}</p>
+				                <p class="Watchbrand">${item.watchBrand}</p>
+				            </div>
+				            <div class="watchPrice">
+				                <p class="quantitywa">1</p> 
+				                <p class="quantitywa">$ ${item.productPrice}</p>
+				            </div>
+				        </div>
+				    </div>
+			</c:forEach>
 
-                </div>
-            </div>
-            <div class="iteminfo">
-                <div class="Watchname">
-                    <p class="watchnametobegen"> xxxxx</p>
-                    
-                    <div class="watchquantity">
-                        <p class="quantitywa" >x</p>
-                    </div>
-                    <div class="watchPrice">
-                        <p class="quantitywa">xxx</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div> -->
+        <div>
+            <img src="${pageContext.request.contextPath}/assets/PNG/Vector 13.png" style="padding-left: 80px; scale: 90%;">
+        </div>
+        
+        
+        
         <div>
             <img src="${pageContext.request.contextPath}/assets/PNG/Vector 9.png" style=" padding-left: 955px;  position: relative; top: -70px;" class="sepration">
         </div>      

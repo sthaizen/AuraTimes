@@ -60,16 +60,16 @@ public class loginController extends HttpServlet {
                     session.setAttribute("PhoneNumber", rs.getString("PhoneNumber"));
                     session.setAttribute("Email", rs.getString("Email"));
 
-                    // Optional: Set user role in session
+                    //  Set user role in session
                     String role = "customer";  // Default role
                     if ("yatharthadai".equals(rs.getString("Username"))) {
                         role = "admin";  // if you want to make changes in the admin update here
                     }
                     session.setAttribute("Role", role);
 
-                    // Set the role cookie (optional, valid for 30 days)
+                    // Set the role cookie 
                     Cookie roleCookie = new Cookie("role", role);
-                    roleCookie.setMaxAge(30 * 24 * 60 * 60); // 30 days in seconds
+                    roleCookie.setMaxAge(30 * 24 * 60 * 60); 
                     response.addCookie(roleCookie);
 
                     // Redirect to the home page or dashboard based on role

@@ -145,11 +145,19 @@
                     </div>
                 </div>
                 <div class="buttonsaa">
-                    <form action="">
-                        <button class="addtocart" type="button">
-                            <h2 class="add">Add to cart</h2>
-                        </button>
-                    </form>
+                    <%-- <form action="${pageContext.request.contextPath}/addtocart?productName=${product.product_Name}&watchBrand=${product.watch_brand}&productPrice=${product.product_Price}" method="get">
+    <button class="addtocart" type="submit">
+        <h2 class="add">Add to cart</h2>
+    </button>
+</form> --%>
+						<form action="${pageContext.request.contextPath}/addtocart" method="post">
+						    <input type="hidden" name="productName" value="${product.product_Name}" />
+						    <input type="hidden" name="watchBrand" value="${product.watch_brand}" />
+						    <input type="hidden" name="productPrice" value="${product.product_Price}" />
+						    <input type="hidden" name="productImage" value="${product.product_Img}" />
+						    <button type="submit" class="addtocart"><h2 class="add">Add to cart</h2></button>
+						</form>
+
                 </div>
                 <div class="blasasda">
                     <div class="yrcon">
