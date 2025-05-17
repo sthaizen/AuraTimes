@@ -37,7 +37,7 @@
          <!-- Navigation -->
          <nav class="main-nav" style="top: 15px;">
             <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"> 
-            <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"><a class="Menu">Menu</a></div>
+            <div class="menuebar" style="position: relative; left: 0px; cursor: pointer;"><a class="Menu">Menu</a></div>
             </div>
            
             <div class="logo" style="position: relative; left: 210px;">
@@ -109,13 +109,14 @@
     <!-- Filter Section -->
 <div class="rect1">
   <ul class="typetext">
-        <li><p class="txtoo">Filter</p></li>
+        
         <li><a class="txtoo" href="filterProduct?brand=Patek Philippe">Patek Philippe</a></li>
         <li><a class="txtoo" href="filterProduct?brand=Audemars Piguet">Audemars Piguet</a></li>
         <li><a class="txtoo" href="filterProduct?brand=Vacheron Constantin">Vacheron Constantin</a></li>
         <li><a class="txtoo" href="filterProduct?brand=Jaeger‑LeCoultre">Jaeger‑LeCoultre</a></li>
         <li><a class="txtoo" href="filterProduct?brand=Cartier">Cartier</a></li>
         <li><a class="txtoo" href="filterProduct?brand=Rolex">Rolex</a></li>
+        <li><p class="txtoo"><a href="Collection" class="txtoo">Clear Filter</a></p></li>
     </ul>
 </div>
 

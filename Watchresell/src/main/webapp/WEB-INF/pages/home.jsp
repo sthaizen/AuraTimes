@@ -37,8 +37,9 @@
     <div id="main">
         <!-- Navigation -->
         <nav class="main-nav" style="top: 15px;">
-            <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"><a class="Menu">Menu</a></div>
-            <img src="${pageContext.request.contextPath}/assets/PNG/Menulogo.png" class="logoasd">
+            <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;">
+                    <div class="menuebar" style="position: relative; left: 00px; cursor: pointer;"><a class="Menu">Menu</a></div>
+                </div>
             <div class="logo" style="position: relative; left: 210px;"><img src="${pageContext.request.contextPath}/assets/PNG/Logo.png" alt="Logo" /></div>
             <div class="inner-main-nav">
                 <ul>
@@ -117,7 +118,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Omega.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">MOONWATCH</p>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="Collection" style="text-decoration: none;">
                             <h2 class="maintxt11">Omega Speed Master</h2>
                         </a>
                     </div>
@@ -126,7 +127,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Rolexsub.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">DAY-JUST</p>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="Collection" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex Submariner</h2>
                         </a>
                     </div>
@@ -135,7 +136,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/yatmaster.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">LATEST 2025</p>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="Collection" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex Yacht-Master</h2>
                         </a>
                     </div>
@@ -144,7 +145,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Bat girl.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">Batman</p>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="Collection" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex GMT-Master</h2>
                         </a>
                     </div>
@@ -205,19 +206,19 @@
                                 <video AUTOPLAY loop muted playsinline src="${pageContext.request.contextPath}/assets/Video/secondvid.mp4" type="video/mp4" class="secondvid"></video>
                             </div>
                             <div class="buyrolee">
-                                <a href=""><img src="${pageContext.request.contextPath}/assets/PNG/Smolpng.png" alt="" class="smolroleee"></a>
+                                <a href="Collection"><img src="${pageContext.request.contextPath}/assets/PNG/Smolpng.png" alt="" class="smolroleee"></a>
                                 <div class="textooo" style="cursor: pointer;">
-                                    <a href="">
+                                    <a href="Collection">
                                         <h1 class="mastertxtoo">THE ROLEX GMT-MASTER </h1>
                                     </a>
-                                    <a href="">
+                                    <a href="Collection">
                                         <h1 class="mastertxtoo">BATMAN, 124536LB</h1>
                                     </a>
                                     <h3 class="transparntoo">40 mm, White Gold</h3>
-                                    <a href="">
+                                    <a href="Collection">
                                         <h2 class="classooo">USD $14,000</h2>
                                     </a>
-                                    <a href="">
+                                    <a href="Collection">
                                         <h3 class="shopnow">Shop Now</h3>
                                     </a>
                                     <a href="" class="cartimg"> <img src="${pageContext.request.contextPath}/assets/PNG/Cartsml.png" alt=""></a>

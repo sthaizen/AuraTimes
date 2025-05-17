@@ -81,11 +81,11 @@ public class loginController extends HttpServlet {
                         dispatcher = request.getRequestDispatcher("/WEB-INF/pages/home.jsp");
                     }
                 } else {
-                    request.setAttribute("status", "false");
+                    request.setAttribute("status", "Invalid username or password.");
                     dispatcher = request.getRequestDispatcher("/WEB-INF/pages/login.jsp");
                 }
             } else {
-                request.setAttribute("status", "false");
+                request.setAttribute("status", "Invalid username or password.");
                 dispatcher = request.getRequestDispatcher("/WEB-INF/pages/login.jsp");
             }
 

@@ -123,7 +123,7 @@ overflow : hidden;
 }
 .Insidebox{
     width: 656px;
-    height: 720px;
+    height: 820px;
     flex-shrink: 0;
     border-radius: 15px;
     /* background: rgba(0, 0, 0); */
@@ -199,7 +199,7 @@ overflow : hidden;
     font-family: Manrope;
     font-style: normal;
     font-weight: 600;
-    padding-top: 35px;
+    padding-top: 5px;
     
     padding-left: 117px;
     color: #ffffff;
@@ -219,3 +219,4 @@ overflow : hidden;
     color: #ffffff;
     opacity: 100%;
 }
+

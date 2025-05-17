@@ -403,7 +403,7 @@ scale: 102%;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    padding-top: 25px;
+    padding-top: 45px;
     padding-left: 57px;
 }
 .perfectoo{
@@ -805,7 +805,7 @@ Insidemenu{
     }
     
    .fullbody{
-    scale: 80%;
+    scale: 85%;
     position: relative;
     top: -100px;
 }

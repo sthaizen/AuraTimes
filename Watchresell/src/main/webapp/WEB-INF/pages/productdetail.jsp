@@ -37,7 +37,7 @@
             <!-- Navigation -->
             <nav class="main-nav" style="top: 15px;">
                 <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;">
-                    <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"><a class="Menu">Menu</a></div>
+                    <div class="menuebar" style="position: relative; left: 00px; cursor: pointer;"><a class="Menu">Menu</a></div>
                 </div>
                 <div class="logo" style="position: relative; left: 210px;">
                     <a href="home.html"><img src="${pageContext.request.contextPath}/assets/img/logosada.png" alt="Logo" /></a>
@@ -103,11 +103,11 @@
         </div>
   
         <div>
-            <img src="${pageContext.request.contextPath}/assets/PNG/Vector 8.png" style="scale: 100%; padding-top: 126px;">   
+            <img src="${pageContext.request.contextPath}/assets/PNG/Vector 8.png" style="scale: 100%; padding-top: 86px;  opacity: 0;">   
         </div>
         <div>
             <a href="Collection" style="text-decoration: none;">
-                <h3 class="backbtn">< Back</h3>
+                <h3 class="backbtn"></h3>
             </a>
             <div>
                 <img src="${pageContext.request.contextPath}/assets/PNG/secondlong.png" style="padding-left: 61px; padding-top: 19px;">

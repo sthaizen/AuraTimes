@@ -60,14 +60,20 @@
                             
                             
                             <div class="placeholderss" >
+                             <% String status = (String) request.getAttribute("status"); %>
+							    <% if (status != null) { %>
+							        <div class="ndhead">
+							            <%= status %>
+							        </div>
+							    <% } %>
                                 <form action="login" method="post">
                                 
                                 
-                                    <input type="text" name="Username" placeholder="Username " required class="plcholder" autocomplete="off" ><br>
+                                    <input type="text" name="Username" placeholder="Username "  class="plcholder" autocomplete="off" ><br>
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     
-                                    <input type="password" name="Password" placeholder="Password" required class="plcholder"  autocomplete="off"><br>
+                                    <input type="password" name="Password" placeholder="Password"  class="plcholder"  autocomplete="off"><br>
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     

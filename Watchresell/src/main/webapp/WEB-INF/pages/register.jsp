@@ -23,9 +23,9 @@
             <div class="logo">
                 <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/Logo.png" class="png"></a>
             </div>
-            <div style="position: relative; top: -50px;">
+            <div style="position: relative; top: -80px;">
                 <div class="lefttext" style="cursor: default;">
-                     <a href="login" style="text-decoration: none;"><h3 class="getin"> < login </h3></a>
+                     <a href="login" style="text-decoration: none;"><h3 class="getin">  </h3></a>
                     <h1 class="maintxt">YOUR JOURNEY BEGINS HERE
                         SIGN UP TO UNLOCK
                         REALM OF REFINEMENT
@@ -71,37 +71,39 @@
                         
                             <div class="placeholderss" >
                                 <form action="register" method="post" >
-                                    <input type="text" name="FullName" placeholder="Full Name" required class="plcholder" autocomplete="off"><br>
+                                    <input type="text" name="FullName" placeholder="Full Name"  class="plcholder" autocomplete="off"><br>
                                     
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     
-                                    <input type="text" name="Username" placeholder="Username" required class="plcholder" autocomplete="off"><br>
+                                    <input type="text" name="Username" placeholder="Username"  class="plcholder" autocomplete="off"><br>
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     
-                                    <input type="date" name="Dateobirth" placeholder="Date of Birth" required class="plcholder" autocomplete="off"><br>
+                                    <input type="date" name="Dateobirth" placeholder="Date of Birth"  class="plcholder" autocomplete="off"><br>
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     
-                                    <input type="text" name="Gender" placeholder="Gender" required class="plcholder" autocomplete="off"><br>
+                                    <input type="text" name="Gender" placeholder="Gender"  class="plcholder" autocomplete="off"><br>
                                     
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     
-                                    <input type="Email" name="Email" placeholder="Email" required class="plcholder" autocomplete="off"><br>
+                                    <input type="Email" name="Email" placeholder="Email"  class="plcholder" autocomplete="off"><br>
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     
-                                    <input type="password" name="Password" placeholder="Password" required class="plcholder" autocomplete="off"><br>
+                                    <input type="password" name="Password" placeholder="Password"  class="plcholder" autocomplete="off"><br>
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     
                                     
-                                    <input type="number" name="Phonenumber" placeholder="Phone Number" required class="plcholder" autocomplete="off"><br>
+                                    <input type="number" name="Phonenumber" placeholder="Phone Number"  class="plcholder" autocomplete="off"><br>
                                     <img src="${pageContext.request.contextPath}/assets/img/Longvect.png" alt=""><br>
                                     <button type="submit" class="btn">Register</button>
                                     
+                                    
                                 </form>
+                                <p class="doregister" >	Already have an account? <a href="login" class="registerhere">Login here</a></p>
                             </div>
                         </div>
                         
