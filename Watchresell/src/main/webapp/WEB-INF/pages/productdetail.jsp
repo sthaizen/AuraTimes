@@ -82,17 +82,17 @@
                 <a href="#" class="pptt2">User - <%= session.getAttribute("Username")%></a>
                 <a href="#" class="pptt2">Credits</a>
                 <div class="social-icons">
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/Facebook icon.png" alt="Facebook" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/twitter icon.png" alt="Twitter" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/Youtube icon.png" alt="YouTube" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/githubicon.png" alt="GitHub" /></a>
+                    <a href="https://www.facebook.com/jj.fish.142892"><img src="${pageContext.request.contextPath}/assets/PNG/Facebook icon.png" alt="Facebook" /></a>
+                    <a href="https://x.com/home"><img src="${pageContext.request.contextPath}/assets/PNG/twitter icon.png" alt="Twitter" /></a>
+                    <a href="https://www.youtube.com/"><img src="${pageContext.request.contextPath}/assets/PNG/Youtube icon.png" alt="YouTube" /></a>
+                    <a href="https://github.com/sthaizen/AuraTimes.git"><img src="${pageContext.request.contextPath}/assets/PNG/githubicon.png" alt="GitHub" /></a>
                 </div>
             </div>
         </div>
         </header>
 
         <!-- Notification Modal -->
-        <div id="cartModal" class="modal-overlay">
+        <!-- <div id="cartModal" class="modal-overlay">
             <div class="modal-box">
                 <h2 class="modal-title">Added to Cart</h2>
                 <p class="modal-desc">Your item has been successfully added to the cart.</p>
@@ -100,7 +100,7 @@
                     <button id="closeCartModal" class="modal-btn secondary-btn">Close</button>
                 </div>
             </div>
-        </div>
+        </div> -->
   
         <div>
             <img src="${pageContext.request.contextPath}/assets/PNG/Vector 8.png" style="scale: 100%; padding-top: 86px;  opacity: 0;">   
@@ -303,10 +303,10 @@
                     <p class="follow">Follow us on</p>
                 
                 <div class="icons">
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/facebook.png" alt=""></a>
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/twitter.png" alt=""></a>
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/youtube.png" alt=""></a>
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/github.png" alt=""></a>
+                    <a href="https://www.facebook.com/jj.fish.142892"><img src="${pageContext.request.contextPath}/assets/Logo/facebook.png" alt=""></a>
+                    <a href="https://x.com/home"><img src="${pageContext.request.contextPath}/assets/Logo/twitter.png" alt=""></a>
+                    <a href="https://www.youtube.com/"><img src="${pageContext.request.contextPath}/assets/Logo/youtube.png" alt=""></a>
+                    <a href="https://github.com/sthaizen/AuraTimes"><img src="${pageContext.request.contextPath}/assets/Logo/github.png" alt=""></a>
 
                 </div>
             </div>
@@ -350,11 +350,11 @@
             </div>
             <div class="Members">
                 <h1 class="maintxt">Members</h1>
-                <h3 class="secondtxt">Sujal</h3>
-                <h3 class="secondtxt">Yathartha</h3>
-                <h3 class="secondtxt">Shakshim</h3>
-                <h3 class="secondtxt">Niran</h3>
-                <h3 class="secondtxt">Khoi ko xa</h3>
+                <h3 class="secondtxt" >Sujal Parajuli</h3>
+                <h3 class="secondtxt">Yathartha Shrestha</h3>
+                <h3 class="secondtxt">Sakshyam Kafle</h3>
+                <h3 class="secondtxt">Niran Bhatta</h3>
+                <h3 class="secondtxt">Wassem Malik</h3>
             </div>
 
         </div>

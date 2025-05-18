@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
     
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +27,7 @@
             <a href="home.html"><img src="${pageContext.request.contextPath}/assets/img/logosada.png" alt="Logo" /></div></a>
             <div class="inner-main-nav">
                 <ul>
-                    <li id="coll"><a href="#">Collections</a></li>
+                    <li id="coll"><a href="Collection">Collections</a></li>
                     <li id="coll"><a href="contact">Contact</a></li>
                     <li id="coll"><a href="#">Add to cart</a></li>
                 </ul>
@@ -41,13 +42,13 @@
         <div class="containers11">
         <div class="containers1">
             <div class="backbutton">
-                <a href="#" style="text-decoration: none;"><p class="backabutton"> < Back</p></a>
+                <a href="Collection" style="text-decoration: none;"><p class="backabutton"> < Back</p></a>
                 <h1 class="yourcart">YOUR CART</h1>
             </div>
             <div class="productinfo">
                 <h2 class="info">Product</h2>
-                <h2 class="info" style="padding-left: 300px;">Quantity</h2>
-                <h2 class="info">Price</h2>
+                <h2 class="info" style="padding-left: 300px;  opacity: 0%;">Quantity</h2>
+                <h2 class="info">Brand</h2>
             </div>
             <div>
                 <img src="${pageContext.request.contextPath}/assets/PNG/Vector 13.png" style="padding-left: 80px;">
@@ -60,26 +61,33 @@
             </div>
             
             <c:if test="${empty cartItems}">
-		        <p>Your cart is empty.</p>
+		        <p class="shippingtime" style="padding-left: 405px; padding-top: 54px;">Your cart is empty.</p>
 		    </c:if>
              <c:forEach var="item" items="${cartItems}">
 				    <div class="itemtobeadded">
+				    <div>
+			                <img src="${pageContext.request.contextPath}/uploads/${item.productImage}"  class="balha"></div>
+			                <div style="padding-left: 25px; padding-top: 24px;">
+			                
+			            </div>
 				        <div class="iteminfo">
+				        
 				            <div class="Watchname">
 				                <p class="watchnametobegen">${item.productName}</p>
 				                <p class="Watchbrand">${item.watchBrand}</p>
 				            </div>
 				            <div class="watchPrice">
-				                <p class="quantitywa">1</p> 
+				                
 				                <p class="quantitywa">$ ${item.productPrice}</p>
 				            </div>
 				        </div>
 				    </div>
-			</c:forEach>
-
-        <div>
+				     <div>
             <img src="${pageContext.request.contextPath}/assets/PNG/Vector 13.png" style="padding-left: 80px; scale: 90%;">
         </div>
+			</c:forEach>
+
+       
         
         
         
@@ -91,31 +99,36 @@
         <div class="containers2">
             <div class="transectiondetais">
                 <div>
-                    <h1 class="summ"> SUMMARY</h1>
-                    <img src="${pageContext.request.contextPath}/assets/PNG/Vector 10.png" style="padding-top: 20px;">
-                    <div class="Shipp">
-                        <h3 class="shippingtime">Shipping (10 to 15business days)</h3>
-                        <h3 class="Shippingamouint">xxxx</h3>
-                    </div>
-                    <div class="Shipp">
-                        <h3 class="shippingtime">Tax</h3>
-                        <h3 class="Shippingamouint">xxxx</h3>
-                    </div>
-                    <div class="Shipp">
-                        <h3 class="shippingtime">Subtotal</h3>
-                        <h3 class="Shippingamouint">xxxx</h3>
-                        
-                    </div>
-                    <img src="${pageContext.request.contextPath}/assets/PNG/Vector 10.png" style="padding-top: 30px;">
-                    <div class="Total">
-                        <h3 class="Totaltxt">Total</h3>
-                        <h3 class="Totaltxt">xxxx</h3>
-                    </div>
+                    <%-- Calculate total price from cartItems --%>
+					<c:set var="totalPrice" value="0" />
+					<c:forEach var="item" items="${cartItems}">
+					    <c:set var="totalPrice" value="${totalPrice + item.productPrice}" />
+					</c:forEach>
+					
+					<h1 class="summ">SUMMARY</h1>
+					<img src="${pageContext.request.contextPath}/assets/PNG/Vector 10.png" style="padding-top: 20px;">
+					<div class="Shipp">
+					    <h3 class="shippingtime">Shipping (10 to 15 business days)</h3>
+					    <h3 class="Shippingamouint">Free</h3>
+					</div>
+					<div class="Shipp">
+					    <h3 class="shippingtime">Tax</h3>
+					    <h3 class="Shippingamouint">0%</h3>
+					</div>
+					<div class="Shipp">
+					    <h3 class="shippingtime">Subtotal</h3>
+					    <h3 class="Shippingamouint">$${totalPrice}</h3>
+					</div>
+					<img src="${pageContext.request.contextPath}/assets/PNG/Vector 10.png" style="padding-top: 30px;">
+					<div class="Total">
+					    <h3 class="Totaltxt">Total</h3>
+					    <h3 class="Totaltxt">$${totalPrice}</h3>
+					</div>
                     <div class="btna" style="margin-top: 30px;">
                         <button class="btn">Proceed To Checkout</button>
                     </div>
                     <div>
-                        <a href="home" class="contpurc" style="text-decoration: none; "> <p style="padding-top: 40px; padding-left: 180px;" class="asdasdasd"> Continue Purchase </p> </a>
+                        <a href="Collection" class="contpurc" style="text-decoration: none; "> <p style="padding-top: 40px; padding-left: 180px;" class="asdasdasd"> Continue Purchase </p> </a>
                     </div>
                     <div>
                         <h1 class="asdwedhje">Have a Coupon? Enter your Code</h1>
@@ -136,11 +149,11 @@
                     <img src="${pageContext.request.contextPath}/assets/Logo/bigblacklogo.png" >
                     <p class="follow">Follow us on</p>
                 
-                <div class="icons">
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/facebook.png" alt=""></a>
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/twitter.png" alt=""></a>
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/youtube.png" alt=""></a>
-                    <a href=""><img src="${pageContext.request.contextPath}/assets/Logo/github.png" alt=""></a>
+                 <div class="icons">
+                    <a href="https://www.facebook.com/jj.fish.142892"><img src="${pageContext.request.contextPath}/assets/Logo/facebook.png" alt=""></a>
+                    <a href="https://x.com/home"><img src="${pageContext.request.contextPath}/assets/Logo/twitter.png" alt=""></a>
+                    <a href="https://www.youtube.com/"><img src="${pageContext.request.contextPath}/assets/Logo/youtube.png" alt=""></a>
+                    <a href="https://github.com/sthaizen/AuraTimes"><img src="${pageContext.request.contextPath}/assets/Logo/github.png" alt=""></a>
 
                 </div>
             </div>
@@ -184,11 +197,11 @@
             </div>
             <div class="Members">
                 <h1 class="maintxt">Members</h1>
-                <h3 class="secondtxt">Sujal</h3>
-                <h3 class="secondtxt">Yathartha</h3>
-                <h3 class="secondtxt">Shakshim</h3>
-                <h3 class="secondtxt">Niran</h3>
-                <h3 class="secondtxt">Khoi ko xa</h3>
+                <h3 class="secondtxt" >Sujal Parajuli</h3>
+                <h3 class="secondtxt">Yathartha Shrestha</h3>
+                <h3 class="secondtxt">Sakshyam Kafle</h3>
+                <h3 class="secondtxt">Niran Bhatta</h3>
+                <h3 class="secondtxt">Wassem Malik</h3>
             </div>
 
         </div>

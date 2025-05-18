@@ -18,17 +18,19 @@ public class AddToCartController extends HttpServlet {
         String productName = request.getParameter("productName");
         String watchBrand = request.getParameter("watchBrand");
         String priceStr = request.getParameter("productPrice");
+        String productImage = request.getParameter("productImage");
 
         if (productName != null && watchBrand != null && priceStr != null) {
             double productPrice = Double.parseDouble(priceStr);
-            CartItem item = new CartItem(productName, watchBrand, productPrice);
+            CartItem item = new CartItem(productName, watchBrand, productPrice, productImage);
 
             HttpSession session = request.getSession();
             CartService cartService = new CartService(session);
             cartService.addToCart(item);
         }
 
-        response.sendRedirect(request.getContextPath() + "/addtocart");
+        	response.sendRedirect(request.getContextPath() + "/addtocart"); 
+        
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

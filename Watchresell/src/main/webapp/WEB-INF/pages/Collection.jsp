@@ -83,10 +83,10 @@
                 <a href="#" class="pptt2">User - <%= session.getAttribute("Username")%></a>
                 <a href="#" class="pptt2">Credits</a>
                 <div class="social-icons">
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/Facebook icon.png" alt="Facebook" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/twitter icon.png" alt="Twitter" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/Youtube icon.png" alt="YouTube" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/assets/PNG/githubicon.png" alt="GitHub" /></a>
+                    <a href="https://www.facebook.com/jj.fish.142892"><img src="${pageContext.request.contextPath}/assets/PNG/Facebook icon.png" alt="Facebook" /></a>
+                    <a href="https://x.com/home"><img src="${pageContext.request.contextPath}/assets/PNG/twitter icon.png" alt="Twitter" /></a>
+                    <a href="https://www.youtube.com/"><img src="${pageContext.request.contextPath}/assets/PNG/Youtube icon.png" alt="YouTube" /></a>
+                    <a href="https://github.com/sthaizen/AuraTimes.git"><img src="${pageContext.request.contextPath}/assets/PNG/githubicon.png" alt="GitHub" /></a>
                 </div>
             </div>
         </div>
