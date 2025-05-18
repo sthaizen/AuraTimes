@@ -92,7 +92,7 @@
         
         
         <div>
-            <img src="${pageContext.request.contextPath}/assets/PNG/Vector 9.png" style=" padding-left: 955px;  position: relative; top: -70px;" class="sepration">
+            <img src="${pageContext.request.contextPath}/assets/PNG/Vector 9.png" style=" padding-left: 955px;  position: absolute; top: 70px;" class="sepration">
         </div>      
         </div>
         <div style="padding-top: 150px; padding-left: 200px;">
