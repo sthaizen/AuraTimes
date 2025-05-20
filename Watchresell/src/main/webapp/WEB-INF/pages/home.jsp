@@ -1,5 +1,5 @@
-
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,6 +107,9 @@
                 
               </div>
         </div>
+        
+        
+        
         <div class="part2">
             <div class="container2" id="onscrollloc"></div>
             <div class="flowing-text" style="position: relative; top: 191px;left: 91px; z-index: 200;" data-aos="fade-up" data-aos-duration="500" >
@@ -118,7 +121,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Omega.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">MOONWATCH</p>
-                        <a href="Collection" style="text-decoration: none;">
+                        <a href="productdetail?productName=Omega%20Speedmaster" style="text-decoration: none;">
                             <h2 class="maintxt11">Omega Speed Master</h2>
                         </a>
                     </div>
@@ -127,7 +130,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Rolexsub.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">DAY-JUST</p>
-                        <a href="Collection" style="text-decoration: none;">
+                        <a href="productdetail?productName= Rolex%20Submariner" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex Submariner</h2>
                         </a>
                     </div>
@@ -136,7 +139,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/yatmaster.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">LATEST 2025</p>
-                        <a href="Collection" style="text-decoration: none;">
+                        <a href="productdetail?productName=Rolex%20Yacht-Master" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex Yacht-Master</h2>
                         </a>
                     </div>
@@ -145,13 +148,19 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Bat girl.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">Batman</p>
-                        <a href="Collection" style="text-decoration: none;">
+                        <a href="productdetail?productName= GMT-Master%20II" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex GMT-Master</h2>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        
+        
+        
+        
+        
         <div class="container11">
             <div class="card">
                 <div class="firstcard" style="position: relative; z-index: 310; ">
@@ -206,16 +215,16 @@
                                 <video AUTOPLAY loop muted playsinline src="${pageContext.request.contextPath}/assets/Video/secondvid.mp4" type="video/mp4" class="secondvid"></video>
                             </div>
                             <div class="buyrolee">
-                                <a href="Collection"><img src="${pageContext.request.contextPath}/assets/PNG/Smolpng.png" alt="" class="smolroleee"></a>
+                                <a href="productdetail?productName= GMT-Master%20II"><img src="${pageContext.request.contextPath}/assets/PNG/Smolpng.png" alt="" class="smolroleee"></a>
                                 <div class="textooo" style="cursor: pointer;">
                                     <a href="Collection">
                                         <h1 class="mastertxtoo">THE ROLEX GMT-MASTER </h1>
                                     </a>
-                                    <a href="Collection">
+                                    <a href="productdetail?productName= GMT-Master%20II">
                                         <h1 class="mastertxtoo">BATMAN, 124536LB</h1>
                                     </a>
                                     <h3 class="transparntoo">40 mm, White Gold</h3>
-                                    <a href="Collection">
+                                    <a href="productdetail?productName= GMT-Master%20II">
                                         <h2 class="classooo">USD $14,000</h2>
                                     </a>
                                     <a href="Collection">

@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.List;
 
 @WebServlet("/addtocart")
@@ -29,7 +30,9 @@ public class AddToCartController extends HttpServlet {
             cartService.addToCart(item);
         }
 
-        	response.sendRedirect(request.getContextPath() + "/addtocart"); 
+		/* response.sendRedirect(request.getContextPath() + "/productdetail"); */
+        response.sendRedirect(request.getContextPath() + "/productdetail?productName=" + URLEncoder.encode(productName, "UTF-8"));
+
         
     }
 
