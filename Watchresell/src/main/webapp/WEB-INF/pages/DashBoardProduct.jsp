@@ -108,7 +108,7 @@
 
 .Bid {
   position: absolute;
-  top: -20px;
+  top: 0;
   left: 1020px;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .Desp textarea {
-  width: 260px;
+  width: 320px;
   height: 40px;
   padding: 8px;
   box-sizing: border-box;
@@ -140,7 +140,7 @@
 .ProductImage {
   position: absolute;
   top: 80px;
-  left: 395px;
+  left: 600px;
 }
 
 .ProductImage input[type="file"] {
@@ -185,8 +185,8 @@
   border-radius: 4px;
   cursor: pointer;
   position: absolute;
-  bottom: 205px;
-   right:75px;
+   bottom: 205px;
+   right:35px;
   transition: background-color 0.2s ease;
 }
 
@@ -202,17 +202,18 @@
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
+  margin-top: 16px;
 }
+
 
 th, td {
   text-align: left;
-  padding: 0.75rem;
+  padding: 12px;
   border-bottom: 1px solid #334155;
 }
 
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -221,12 +222,12 @@ th, td {
 .btn-dashboard {
   background-color: #22c55e;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .btn-delete {
   background-color: #ef4444;
-  margin-right: 0.5rem;
+  margin-right: 8px;
   color: #fff;
 }
 
