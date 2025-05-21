@@ -38,9 +38,9 @@ public class RegisterController extends HttpServlet {
         String password = request.getParameter("Password");
         String phoneNumber = request.getParameter("Phonenumber");
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/register.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/register.jsp");  // Setting dispatcher to return to the register page
 
-        // Validate fields
+        // Validate messages
         if (ValidationUtil.isNullOrEmpty(fullName)) {
             request.setAttribute("status", "Full name cannot be empty");
             dispatcher.forward(request, response);
@@ -74,27 +74,29 @@ public class RegisterController extends HttpServlet {
 
         // If validation passes, insert into database
         try (Connection con = DbConfig.getDbConnection()) {
-            PreparedStatement pst = con.prepareStatement("INSERT INTO users (FullName, Username, DateOfBirth, Gender, Email, Password, PhoneNumber) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            PreparedStatement pst = con.prepareStatement("INSERT INTO users (FullName, Username, DateOfBirth, Gender, Email, Password, PhoneNumber) VALUES (?, ?, ?, ?, ?, ?, ?)");//Sql statement
+            // Set values to the statement
             pst.setString(1, fullName);
             pst.setString(2, username);
             pst.setString(3, dateOfBirth);
             pst.setString(4, gender);
             pst.setString(5, email);
-            String encryptedPassword = PasswordUtil.encrypt(password, username);
+            String encryptedPassword = PasswordUtil.encrypt(password, username); // Encrypt the password
             pst.setString(6, encryptedPassword);
             pst.setString(7, phoneNumber);
 
-            int rowCount = pst.executeUpdate();
+            int rowCount = pst.executeUpdate(); // Execute the insert operation
             jakarta.servlet.http.HttpSession session = request.getSession();
             //ResultSet rs = pst.executeQuery();
             
             if (rowCount > 0) {
+            	// Registration successful
             	session.setAttribute("FullName", fullName);
                 request.setAttribute("status", "Registration successful!");
-            } else {
+            } else {// registration filed 
                 request.setAttribute("status", "Registration failed, please try again.");
             }
-        } catch (Exception e) {
+        } catch (Exception e) { // database error exception handeling
             e.printStackTrace();
             request.setAttribute("status", "Database error: " + e.getMessage());
         }
@@ -104,7 +106,7 @@ public class RegisterController extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) //  get request to load registration page
             throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(request, response);
     }

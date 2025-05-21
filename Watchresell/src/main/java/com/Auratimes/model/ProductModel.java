@@ -1,5 +1,5 @@
 package com.Auratimes.model;
-
+// product model class that stores and manage product details
 public class ProductModel {
 	private String Product_Name;
 	private String Description;
@@ -7,10 +7,13 @@ public class ProductModel {
 	private String Product_Img;
 	private String watch_brand;
 	private int previous_bid;
+	
 	public ProductModel() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
+	
+	// constructor that create product with product details 
 	public ProductModel(String product_Name, String description, Double product_Price, String product_Img, String watch_brand,
 			int previous_bid) {
 		super();
@@ -21,6 +24,7 @@ public class ProductModel {
 		this.watch_brand = watch_brand;
 		this.previous_bid = previous_bid;
 	}
+	// getter and setter method for each product
 	public String getProduct_Name() {
 		return Product_Name;
 	}
@@ -57,6 +61,7 @@ public class ProductModel {
 	public void setPrevious_bid(int previous_bid) {
 		this.previous_bid = previous_bid;
 	}
+	// Return all the product detail
 	@Override
 	public String toString() {
 		return "ProductModel [Product_Name=" + Product_Name + ", Description=" + Description + ", Product_Price="

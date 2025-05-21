@@ -1,5 +1,5 @@
 package com.islington.controller;
-
+// importing 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,7 +11,7 @@ import java.util.List;
 import com.Auratimes.model.ProductModel;
 import com.Auratimes.service.CollectionServices;
 
-@WebServlet(asyncSupported = true, urlPatterns = { "/Collection" })
+@WebServlet(asyncSupported = true, urlPatterns = { "/Collection" })// Servlet mapped to handle requests to "/Collection" URL
 public class CollectionController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private CollectionServices collectionServices;
@@ -30,11 +30,11 @@ public class CollectionController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        List<ProductModel> collectionList = collectionServices.getAllProducts();
+        List<ProductModel> collectionList = collectionServices.getAllProducts(); // Retreving the list of all products using the collecting service
 
-        request.setAttribute("collectionList", collectionList);
+        request.setAttribute("collectionList", collectionList); // allows the collection to access the array list for displaying
         
-        // Forward the request to the Collection.jsp page
+        // Forward the request to the Collection.jsp page for displaying 
         request.getRequestDispatcher("/WEB-INF/pages/Collection.jsp").forward(request, response);
     }
     @Override

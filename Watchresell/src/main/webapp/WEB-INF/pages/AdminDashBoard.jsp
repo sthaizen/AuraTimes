@@ -29,14 +29,7 @@
                         <span class="title" style="margin-bottom: 20px;">Aura Watch</span>
                     </a>
                 </li>
-                <li>
-                    <a href="adminProfile">
-                        <span class="icon">
-                            <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/user.png" alt="logo" style="width: 30px;"></div>
-                        </span>
-                        <span class="title">Profile</span>
-                    </a>
-                </li>
+               
                
 
                 <li>
@@ -48,15 +41,6 @@
                     </a>
                 </li>
                  <li>
-                    <a href="Collection">
-                        <span class="icon">
-                            <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/home.png" alt="logo" style="width: 30px;"></div>
-                        </span>
-                        <span class="title">Collection</span>
-                    </a>
-                </li>
-
-                <li>
                     <a href="dashBoardProduct">
                         <span class="icon">
                             <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/product.png" alt="logo" style="width: 35px;"></div>
@@ -64,6 +48,25 @@
                         <span class="title">Products</span>
                     </a>
                 </li>
+                
+                 <li>
+                    <a href="adminProfile">
+                        <span class="icon">
+                            <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/user.png" alt="logo" style="width: 30px;"></div>
+                        </span>
+                        <span class="title">User Profile</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="Collection">
+                        <span class="icon">
+                            <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/home.png" alt="logo" style="width: 30px;"></div>
+                        </span>
+                        <span class="title">Preview</span>
+                    </a>
+                </li>
+
+               
                 
 
 

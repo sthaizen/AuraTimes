@@ -1,5 +1,5 @@
 package com.Auratimes.model;
-
+// user model class that stores and manage user details 
 public class UserModel {
     private String username;
     private String email;
@@ -8,7 +8,8 @@ public class UserModel {
     private String phoneNumber;
 
     public UserModel() {}
-
+    
+    //constructor that  creates user model with user details 
     public UserModel(String username, String email, String  dateOfBirth, String gender, String phoneNumber) {
         this.username = username;
         this.email = email;
@@ -16,7 +17,8 @@ public class UserModel {
         this.gender = gender;
         this.phoneNumber = phoneNumber;
     }
-
+    
+    // getter and setter method for each user 
     public String getUsername() {
         return username;
     }
@@ -54,7 +56,7 @@ public class UserModel {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
+    // return user details 
     @Override
     public String toString() {
         return "UserModel [username=" + username + ", email=" + email + ", dateOfBirth=" + dateOfBirth +

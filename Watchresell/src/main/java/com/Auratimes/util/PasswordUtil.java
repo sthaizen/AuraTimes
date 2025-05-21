@@ -1,5 +1,5 @@
 package com.Auratimes.util;
-
+// importing 
 import javax.crypto.*;
 import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
@@ -10,13 +10,19 @@ import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
-
+/**
+ * Utility class for encrypting, decrypting, and matching passwords securely
+ */
 public class PasswordUtil {
     private static final String ENCRYPT_ALGO = "AES/GCM/NoPadding";
     private static final int TAG_LENGTH_BIT = 128;
     private static final int IV_LENGTH_BYTE = 12;
     private static final int SALT_LENGTH_BYTE = 16;
-
+    /**
+    * Generates a secure random nonce (IV or salt)
+    * @param numBytes number of bytes to generate
+    * @return byte array of random bytes
+    */
     public static byte[] getRandomNonce(int numBytes) {
         byte[] nonce = new byte[numBytes];
         new SecureRandom().nextBytes(nonce);
@@ -33,7 +39,7 @@ public class PasswordUtil {
             throw new RuntimeException("Error generating AES key from password", e);
         }
     }
-
+    // Encryption 
     public static String encrypt(String password, String username) {
         try {
             byte[] salt = getRandomNonce(SALT_LENGTH_BYTE);
@@ -54,7 +60,7 @@ public class PasswordUtil {
             return null;
         }
     }
-
+    // Decryption
     public static String decrypt(String encryptedPassword, String username) {
         try {
             byte[] decoded = Base64.getDecoder().decode(encryptedPassword);
@@ -80,7 +86,9 @@ public class PasswordUtil {
             return null;
         }
     }
-
+    
+    
+      //Compares an entered password with an encrypted password after decrypting it
     public static boolean match(String enteredPassword, String username, String encryptedPassword) {
         String decrypted = decrypt(encryptedPassword, username);
         return decrypted != null && MessageDigest.isEqual(

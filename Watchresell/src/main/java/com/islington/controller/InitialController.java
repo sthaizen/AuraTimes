@@ -1,5 +1,5 @@
 package com.islington.controller;
-
+// importing
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -22,7 +22,7 @@ public class InitialController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/pages/initial.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pages/initial.jsp").forward(request, response);  // Forward the request to the initial.jsp page for displaying 
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

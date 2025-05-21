@@ -1,5 +1,5 @@
 package com.islington.controller;
-
+//Import
 import com.Auratimes.util.ValidationUtil;
 import com.Auratimes.config.DbConfig;
 import com.Auratimes.util.PasswordUtil;
@@ -34,13 +34,13 @@ public class UserprofileController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/pages/userprofile.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pages/userprofile.jsp").forward(request, response); // Forward to user profile JSP page
     }
     @Override
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+    	 // Retrieve form parameters
         String fullName = request.getParameter("FullName");
         String username = request.getParameter("Username");
         String dateOfBirth = request.getParameter("Dateobirth");
@@ -51,7 +51,7 @@ public class UserprofileController extends HttpServlet {
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/userprofile.jsp");
 
-        // Input validation
+        // Input validation messgae
         if (ValidationUtil.isNullOrEmpty(fullName)) {
             request.setAttribute("status", "Full name cannot be empty");
             dispatcher.forward(request, response);
@@ -85,29 +85,29 @@ public class UserprofileController extends HttpServlet {
 
         // Update database
         try (Connection con = DbConfig.getDbConnection()) {
-            String sql = "UPDATE users SET FullName = ?, DateOfBirth = ?, Gender = ?, Email = ?, Password = ?, PhoneNumber = ? WHERE Username = ?";
+            String sql = "UPDATE users SET FullName = ?, DateOfBirth = ?, Gender = ?, Email = ?, Password = ?, PhoneNumber = ? WHERE Username = ?"; // SQL query to update the user profile based on username
             try (PreparedStatement pst = con.prepareStatement(sql)) {
                 pst.setString(1, fullName);
                 pst.setString(2, dateOfBirth);
                 pst.setString(3, gender);
                 pst.setString(4, email);
-                String encryptedPassword = PasswordUtil.encrypt(password, username);
+                String encryptedPassword = PasswordUtil.encrypt(password, username); // Encrypt password before storing
+
                 pst.setString(5, encryptedPassword);
-                pst.setString(6, phoneNumber);                pst.setString(7, username);
+                pst.setString(6, phoneNumber); pst.setString(7, username);
 
                 int rowCount = pst.executeUpdate();
-
                 if (rowCount > 0) {
                     request.setAttribute("status", "Profile updated successfully!");
                 } else {
                     request.setAttribute("status", "Update failed. User not found.");
                 }
             }
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) { // exception handeling
             e.printStackTrace();
             request.setAttribute("status", "Database error: " + e.getMessage());
         }
 
-        dispatcher.forward(request, response);
+        dispatcher.forward(request, response); // Forward the request and updated status to the JSP
     }
 }
