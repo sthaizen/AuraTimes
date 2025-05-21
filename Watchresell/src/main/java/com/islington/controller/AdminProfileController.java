@@ -5,11 +5,10 @@ import com.Auratimes.config.DbConfig;
 import com.Auratimes.util.PasswordUtil;
 import com.Auratimes.model.UserModel;
 import com.Auratimes.service.AdminDashboardService;
-//asdasdasd
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -66,7 +65,6 @@ public class AdminProfileController extends HttpServlet {
     /**
      * Handles the actual profile update logic
      * We created this method to centralize all update operations
-     * Only updates admin profiles and blocks regular user profile updates
      */
     private void updateAdminProfile(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -88,13 +86,6 @@ public class AdminProfileController extends HttpServlet {
         // We prepare the dispatcher for forwarding requests
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/AdminProfile.jsp");
 
-        // First check if username belongs to an admin account
-        if (!isAdminUser(username)) {
-            request.setAttribute("status", "Only the details of admin can be updated");
-            dispatcher.forward(request, response);
-            return;
-        }
-        
         // ========= INPUT VALIDATION SECTION ========= //
         // We validate full name isn't empty
         if (ValidationUtil.isNullOrEmpty(fullName)) {
@@ -180,15 +171,5 @@ public class AdminProfileController extends HttpServlet {
 
         // We forward back to profile page with status message
         dispatcher.forward(request, response);
-    }
-    
-    /**
-     * Helper method to check if the username belongs to an admin account
-     * @param username The username to check
-     * @return true if user is an admin, false otherwise
-     */
-    private boolean isAdminUser(String username) {
-        // Based on the loginController, "Sujal" is the admin username
-        return "Sujal".equals(username);
     }
 }
