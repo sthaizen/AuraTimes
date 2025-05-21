@@ -1,4 +1,4 @@
-package com.Auratimes.controller;
+package com.islington.controller;
 
 import com.Auratimes.util.ValidationUtil;
 import com.Auratimes.config.DbConfig;
