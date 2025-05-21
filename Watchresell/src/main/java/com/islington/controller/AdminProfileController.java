@@ -1,4 +1,4 @@
-package com.Auratimes.controller;//asdasd
+package com.Auratimes.controller;//asdasdasd
 
 import com.Auratimes.util.ValidationUtil;
 import com.Auratimes.config.DbConfig;
