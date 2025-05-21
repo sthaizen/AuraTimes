@@ -229,7 +229,7 @@
 
             <div class="team-member">
 
-                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/haha.jpg');"></div>
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/hah.jpg');"></div>
 
                 <h3>Waseem Malik</h3>
 

@@ -76,7 +76,7 @@ public class AuthenticationFilter implements Filter {
 
         // User-only pages
         if (uri.endsWith("/home") || uri.endsWith("/Collection") || uri.endsWith("/filterProduct") || uri.endsWith("/searchProduct") || uri.endsWith("/addtocart")
-                || uri.endsWith("/aboutus") || uri.endsWith("/ysindex") ||  uri.endsWith("/Spindex") ||  uri.endsWith("/Skindex") ||  uri.endsWith("/Nbindex") ||  uri.endsWith("/contact") || uri.endsWith("/productdetail") || uri.endsWith("/storelocation")
+                || uri.endsWith("/aboutus") || uri.endsWith("/ysindex") ||  uri.endsWith("/Spindex") ||  uri.endsWith("/Spindex") ||  uri.endsWith("/terms") ||  uri.endsWith("/privacy") ||  uri.endsWith("/Nbindex") ||  uri.endsWith("/contact") || uri.endsWith("/productdetail") || uri.endsWith("/storelocation")
                 || uri.endsWith("/userprofile")) {
             if ("customer".equals(role)) {
                 chain.doFilter(request, response);

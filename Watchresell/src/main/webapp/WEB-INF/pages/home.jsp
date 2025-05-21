@@ -58,8 +58,8 @@
                     <li><a href="#">THE BRAND</a></li>
                     <li><a href="userprofile">USER PROFILE</a></li>
                     <li><a href="aboutus">ABOUT US</a></li>
-                    <li><a href="AdminDashBoard">FRIENDS & PARTHER</a></li>
-                    <li><a href="storelocation">STORE LOCATIONS</a></li>
+                    <li><a href="privacy">PRIVACY POLICY</a></li>
+                    <li><a href="terms">TERMS & CONDITION</a></li>
                     <li><a href="#">ACCOUNT</a></li>
                 </ul>
             </div>
