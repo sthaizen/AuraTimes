@@ -175,7 +175,7 @@
 
             <div class="team-member">
 
-                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/haha.jpg');"></div>
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/sujalpaj.jpg');"></div>
 
                 <a href="Spindex" target="_blank" style=" text-decoration: none; color: black;""><h3 >Sujal Parajuli</h3></a>
 
@@ -193,11 +193,11 @@
 
             <div class="team-member">
 
-                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/haha.jpg');"></div>
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/yathartha.jpg');"></div>
 
                 <a href="ysindex" target="_blank" style=" text-decoration: none; color: black;"><h3 >Yathartha Shrestha</h3></a>
 
-                <p>Full Stack Developer</p>
+                <p>UI/UX designer</p>
 
                 <div class="team-socials">
 
@@ -211,7 +211,7 @@
 
             <div class="team-member">
 
-                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/haha.jpg');"></div>
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/niran.jpg');"></div>
 
                 <a href="Nbindex" target="_blank" style=" text-decoration: none; color: black;""><h3 >Niran Bhatta</h3></a>
 
@@ -247,7 +247,7 @@
 
             <div class="team-member">
 
-                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/haha.jpg');"></div>
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/hacker.jpg');"></div>
 
                 <a href="Skindex" target="_blank"  style=" text-decoration: none; color: black;"><h3 >Sakshyam Kafle</h3></a>
 

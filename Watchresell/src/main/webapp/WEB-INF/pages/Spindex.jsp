@@ -27,7 +27,7 @@
 
     <section id="profile">
       <div class="section__pic-container">
-        <img src="${pageContext.request.contextPath}/assets/All Images/SujalPP.jpg " alt="Yathartha Shrestha profile picture" />
+        <img src="${pageContext.request.contextPath}/assets/All Images/SujalPP1.jpg " alt="Yathartha Shrestha profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Nice to meet you! <br> I am</p>
