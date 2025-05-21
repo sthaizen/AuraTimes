@@ -40,7 +40,7 @@ public class AuthenticationFilter implements Filter {
         String uri = req.getRequestURI();
 
         // Allow access to static resources
-        if (uri.endsWith(".css") || uri.endsWith(".js") || uri.endsWith(".jpg") || uri.endsWith(".mp4") || uri.endsWith(".png")) {
+        if (uri.endsWith(".css") || uri.endsWith(".js") || uri.endsWith(".jpg") || uri.endsWith(".jpeg") || uri.endsWith(".mp4") || uri.endsWith(".png")) {
             chain.doFilter(request, response);
             return;
         }
@@ -63,8 +63,9 @@ public class AuthenticationFilter implements Filter {
             return;
         }
 
-        // Admin-only pages
-        if (uri.endsWith("/AdminDashBoard") ||  uri.endsWith("/dashBoardProduct") || uri.endsWith("/adminProfile")) {
+     // Admin-only pages
+        if (uri.endsWith("/AdminDashBoard") ||  uri.endsWith("/dashBoardProduct") || uri.endsWith("/adminProfile") 
+            || uri.endsWith("/DeleteUserUtil") || uri.endsWith("/DeleteProductUtil")) {
             if ("admin".equals(role)) {
                 chain.doFilter(request, response);
             } else {
@@ -75,7 +76,7 @@ public class AuthenticationFilter implements Filter {
 
         // User-only pages
         if (uri.endsWith("/home") || uri.endsWith("/Collection") || uri.endsWith("/filterProduct") || uri.endsWith("/searchProduct") || uri.endsWith("/addtocart")
-                || uri.endsWith("/aboutus") || uri.endsWith("/contact") ||  uri.endsWith("/productdetail") || uri.endsWith("/storelocation")
+                || uri.endsWith("/aboutus") || uri.endsWith("/ysindex") ||  uri.endsWith("/Spindex") ||  uri.endsWith("/Skindex") ||  uri.endsWith("/Nbindex") ||  uri.endsWith("/contact") || uri.endsWith("/productdetail") || uri.endsWith("/storelocation")
                 || uri.endsWith("/userprofile")) {
             if ("customer".equals(role)) {
                 chain.doFilter(request, response);
@@ -86,7 +87,7 @@ public class AuthenticationFilter implements Filter {
         }
 
         // Unknown or unauthorized access — default redirect
-        res.sendRedirect(req.getContextPath() + LOGIN);
+        res.sendRedirect(req.getContextPath() + INITIAL);
     }
 
     @Override

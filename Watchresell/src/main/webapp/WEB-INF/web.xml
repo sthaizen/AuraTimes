@@ -3,7 +3,7 @@
   <display-name>islington-student</display-name>
   <welcome-file-list>
        <!--  <welcome-file>initial</welcome-file> -->
-    <welcome-file>initial</welcome-file>    
+    <welcome-file>AdminDashBoard</welcome-file>    
     <welcome-file>index.htm</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.jsp</welcome-file>

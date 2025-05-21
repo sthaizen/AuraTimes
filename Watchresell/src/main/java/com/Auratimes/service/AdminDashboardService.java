@@ -79,4 +79,64 @@ public class AdminDashboardService {
         }
         return users;
     }
+    
+	 public int getCustomerCount() {
+	        int count = 0;
+	        String sql = "SELECT COUNT(*) FROM users WHERE Username NOT IN ('yatharthadai')";
+	        try (Connection con = DbConfig.getDbConnection();
+	             PreparedStatement pst = con.prepareStatement(sql);
+	             ResultSet rs = pst.executeQuery()) {
+	            if (rs.next()) {
+	                count = rs.getInt(1);
+	            }
+	        } catch (Exception e) {
+	            System.err.println("Error fetching customer count: " + e.getMessage());
+	        }
+	        return count;
+	    }
+
+	    public int getAdminCount() {
+	        int count = 0;
+	        String sql = "SELECT COUNT(*) FROM users WHERE Username = 'yatharthadai'";
+	        try (Connection con = DbConfig.getDbConnection();
+	             PreparedStatement pst = con.prepareStatement(sql);
+	             ResultSet rs = pst.executeQuery()) {
+	            if (rs.next()) {
+	                count = rs.getInt(1);
+	            }
+	        } catch (Exception e) {
+	            System.err.println("Error fetching admin count: " + e.getMessage());
+	        }
+	        return count;
+	    }
+
+	    public int getProductCount() {
+	        int count = 0;
+	        String sql = "SELECT COUNT(*) FROM product";
+	        try (Connection con = DbConfig.getDbConnection();
+	             PreparedStatement pst = con.prepareStatement(sql);
+	             ResultSet rs = pst.executeQuery()) {
+	            if (rs.next()) {
+	                count = rs.getInt(1);
+	            }
+	        } catch (Exception e) {
+	            System.err.println("Error fetching product count: " + e.getMessage());
+	        }
+	        return count;
+	    }
+
+	    public double getTotalProductValue() {
+	        double total = 0;
+	        String sql = "SELECT SUM(product_price) FROM product";
+	        try (Connection con = DbConfig.getDbConnection();
+	             PreparedStatement pst = con.prepareStatement(sql);
+	             ResultSet rs = pst.executeQuery()) {
+	            if (rs.next()) {
+	                total = rs.getDouble(1);
+	            }
+	        } catch (Exception e) {
+	            System.err.println("Error fetching total product value: " + e.getMessage());
+	        }
+	        return total;
+	    }
 }

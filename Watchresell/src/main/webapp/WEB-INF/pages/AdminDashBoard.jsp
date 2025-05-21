@@ -16,8 +16,7 @@
 </head>
 
 <body>
-
-       <!-- =============== Navigation ================ -->
+    <!-- =============== Navigation ================ -->
     <div class="container">
            <div class="navigation">
             <ul>
@@ -29,10 +28,7 @@
                         <span class="title" style="margin-bottom: 20px;">Aura Watch</span>
                     </a>
                 </li>
-               
-               
-
-                <li>
+                 <li>
                     <a href="AdminDashBoard">
                         <span class="icon">
                             <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/sales.png" alt="logo" style="width: 35px;"></div>
@@ -40,7 +36,8 @@
                         <span class="title">Stats</span>
                     </a>
                 </li>
-                 <li>
+                
+                <li>
                     <a href="dashBoardProduct">
                         <span class="icon">
                             <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/product.png" alt="logo" style="width: 35px;"></div>
@@ -48,27 +45,19 @@
                         <span class="title">Products</span>
                     </a>
                 </li>
-                
-                 <li>
+                <li>
                     <a href="adminProfile">
                         <span class="icon">
                             <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/user.png" alt="logo" style="width: 30px;"></div>
                         </span>
-                        <span class="title">User Profile</span>
+                        <span class="title">Profile</span>
                     </a>
                 </li>
-                 <li>
-                    <a href="Collection">
-                        <span class="icon">
-                            <div class="nav-icon"><img src="${pageContext.request.contextPath}/assets/img/home.png" alt="logo" style="width: 30px;"></div>
-                        </span>
-                        <span class="title">Preview</span>
-                    </a>
-                </li>
+               
 
                
+              
                 
-
 
                 <li style="margin-top: 30px;">
                     
@@ -89,15 +78,11 @@
 
                     <img src="${pageContext.request.contextPath}/assets/img/menu.png" alt="" width="30px">
                 </div>
-
-      <!-- ======================= Login ma vako user ================== -->
-
-                <div class="user">
-                    <img src="${pageContext.request.contextPath}/assets/img/profile.png" alt="user">
-                </div>
+                   
             </div>
 
             
+       <!-- =============== Navigation ================ -->
 
 
 
@@ -109,49 +94,50 @@
     <div class="cardBox">
         <div class="card">
             <div>
-                <div class="numbers">10</div>
-                <div class="cardName">Users</div>
+                <div class="numbers">${customerCount}</div>
+                <div class="cardName">Customers</div>
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/views.png"alt="" style="width: 55px; margin-left: 10px;">
+                <img src="${pageContext.request.contextPath}/assets/img/Customerss.png"alt="" style="width: 55px; margin-left: 10px;">
             </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">20</div>
+                <div class="numbers">${productCount}</div>
                 <div class="cardName" style="width: 90px;">Products</div>
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/cart.png" alt="" style="width: 55px; margin-left: 10px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/productSearch.png" alt="" style="width: 55px; margin-left: 10px;">            </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">0</div>
-                <div class="cardName">Reviews</div>
+                <div class="numbers">${adminCount}</div>
+                <div class="cardName">Admins</div>
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/reviews.png" alt="" style="width: 55px; margin-left: 50px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/admin.png" alt="" style="width: 55px; margin-left: 50px;">            </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">Rs 0</div>
-                <div class="cardName">Revenue</div>
+                <div class="numbers" style="font-size:32px;">$${totalAmount}</div>
+                <div class="cardName">Total Inventory</div>
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/profit.png" alt="" style="width: 55px; margin-left: 50px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/profit.png" alt="" style="width: 55px; margin-left: 10px;">            </div>
 
         </div>
 
     
 </div>
  <!-- ================= Card Layout================ -->
+
 
  <!-- ================= Add Product section============ -->
 
