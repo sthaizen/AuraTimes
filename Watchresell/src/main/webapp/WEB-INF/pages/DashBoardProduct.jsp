@@ -108,7 +108,7 @@
 
 .Bid {
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 1020px;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .Desp textarea {
-  width: 320px;
+  width: 260px;
   height: 40px;
   padding: 8px;
   box-sizing: border-box;
@@ -140,7 +140,7 @@
 .ProductImage {
   position: absolute;
   top: 80px;
-  left: 600px;
+  left: 395px;
 }
 
 .ProductImage input[type="file"] {
@@ -185,8 +185,8 @@
   border-radius: 4px;
   cursor: pointer;
   position: absolute;
-   bottom: 205px;
-   right:35px;
+  bottom: 205px;
+   right:75px;
   transition: background-color 0.2s ease;
 }
 

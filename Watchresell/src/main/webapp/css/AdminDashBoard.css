@@ -277,7 +277,7 @@ left: 25px;
 .cardBox {
   position: relative;
   width: 75%;
-  left: 310px;
+  left: 210px;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

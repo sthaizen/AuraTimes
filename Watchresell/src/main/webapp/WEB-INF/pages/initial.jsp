@@ -83,7 +83,8 @@
                 
               </div>
         </div>
-        <%-- <div class="part2">
+        
+         <div class="part2">
             <div class="container2" id="onscrollloc"></div>
             <div class="flowing-text" style="position: relative; top: 191px;left: 91px; z-index: 200;" data-aos="fade-up" data-aos-duration="500" >
                 <h1 class="head1" id="">Ever-Flowing Imagination</h1>
@@ -95,7 +96,7 @@
                     <div class="watchstxt">
                         <p class="toptxtt">MOONWATCH</p>
                         <a href="#" style="text-decoration: none;">
-                            <h2 class="maintxt" >Omega Speed Master</h2>
+                            <h2 class="maintxt11">Omega Speed Master</h2>
                         </a>
                     </div>
                 </div>
@@ -104,7 +105,7 @@
                     <div class="watchstxt">
                         <p class="toptxtt">DAY-JUST</p>
                         <a href="#" style="text-decoration: none;">
-                            <h2 class="maintxt">Rolex Submariner</h2>
+                            <h2 class="maintxt11">Rolex Submariner</h2>
                         </a>
                     </div>
                 </div>
@@ -113,7 +114,7 @@
                     <div class="watchstxt">
                         <p class="toptxtt">LATEST 2025</p>
                         <a href="#" style="text-decoration: none;">
-                            <h2 class="maintxt">Rolex Yacht-Master</h2>
+                            <h2 class="maintxt11">Rolex Yacht-Master</h2>
                         </a>
                     </div>
                 </div>
@@ -121,13 +122,13 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Bat girl.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">Batman</p>
-                        <a href="#" style="text-decoration: none;">
-                            <h2 class="maintxt">Rolex GMT-Master</h2>
+                        <a href="login" style="text-decoration: none;">
+                            <h2 class="maintxt11">Rolex GMT-Master</h2>
                         </a>
                     </div>
                 </div>
             </div>
-        </div> --%>
+        </div>
         </div>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
