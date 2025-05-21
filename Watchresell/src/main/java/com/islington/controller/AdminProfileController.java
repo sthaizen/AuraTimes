@@ -1,5 +1,6 @@
 package com.islington.controller;
 
+
 import com.Auratimes.util.ValidationUtil;
 import com.Auratimes.config.DbConfig;
 import com.Auratimes.util.PasswordUtil;
@@ -9,6 +10,7 @@ import com.Auratimes.service.AdminDashboardService;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -65,6 +67,7 @@ public class AdminProfileController extends HttpServlet {
     /**
      * Handles the actual profile update logic
      * We created this method to centralize all update operations
+     * Only updates admin profiles and blocks regular user profile updates
      */
     private void updateAdminProfile(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -86,6 +89,13 @@ public class AdminProfileController extends HttpServlet {
         // We prepare the dispatcher for forwarding requests
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/AdminProfile.jsp");
 
+        // First check if username belongs to an admin account
+        if (!isAdminUser(username)) {
+            request.setAttribute("status", "Only the details of admin can be updated!");
+            dispatcher.forward(request, response);
+            return;
+        }
+        
         // ========= INPUT VALIDATION SECTION ========= //
         // We validate full name isn't empty
         if (ValidationUtil.isNullOrEmpty(fullName)) {
@@ -132,7 +142,7 @@ public class AdminProfileController extends HttpServlet {
         // ========= DATABASE UPDATE SECTION ========= //
         try (Connection con = DbConfig.getDbConnection()) {
             // We prepare SQL query to update admin profile
-            String sql = "UPDATE users SET FullName = ?, DateOfBirth = ?, Gender = ?, Email = ?, Password = ?, PhoneNumber = ? WHERE Username = ?";
+            String sql = "UPDATE users SET FullName = ?, DateOfBirth = ?, Gender = ?, Email = ?, Password = ?, PhoneNumber = ? WHERE Username = ? AND Role = 'admin'";
             
             try (PreparedStatement pst = con.prepareStatement(sql)) {
                 // We set all parameters for the update query
@@ -161,7 +171,7 @@ public class AdminProfileController extends HttpServlet {
                     request.getSession().setAttribute("Email", email);
                     request.getSession().setAttribute("PhoneNumber", phoneNumber);
                 } else {
-                    request.setAttribute("status", "Update failed. Admin user not found.");
+                    request.setAttribute("status", "Update failed. Admin user not found!");
                 }
             }
         } catch (ClassNotFoundException | SQLException e) {
@@ -171,5 +181,31 @@ public class AdminProfileController extends HttpServlet {
 
         // We forward back to profile page with status message
         dispatcher.forward(request, response);
+    }
+    
+    /**
+     * Helper method to check if the username belongs to an admin account
+     * @param username The username to check
+     * @return true if user is an admin, false otherwise
+     */
+    private boolean isAdminUser(String username) {
+        try (Connection con = DbConfig.getDbConnection()) {
+            String sql = "SELECT Role FROM users WHERE Username = ?";
+            
+            try (PreparedStatement pst = con.prepareStatement(sql)) {
+                pst.setString(1, username);
+                
+                try (ResultSet rs = pst.executeQuery()) {
+                    if (rs.next()) {
+                        String role = rs.getString("Role");
+                        return "admin".equalsIgnoreCase(role);
+                    }
+                }
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return false;
     }
 }
