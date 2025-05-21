@@ -103,45 +103,44 @@
 
 
 
-
  <!-- ================= Card Layout================ -->
 
     <div class="cardBox">
         <div class="card">
             <div>
-                <div class="numbers">10</div>
-                <div class="cardName">Users</div>
+                <div class="numbers">${customerCount}</div>
+                <div class="cardName">Customers</div>
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/views.png"alt="" style="width: 55px; margin-left: 10px;">
+                <img src="${pageContext.request.contextPath}/assets/img/Customerss.png"alt="" style="width: 55px; margin-left: 10px;">
             </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">20</div>
+                <div class="numbers">${productCount}</div>
                 <div class="cardName" style="width: 90px;">Products</div>
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/cart.png" alt="" style="width: 55px; margin-left: 10px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/productSearch.png" alt="" style="width: 55px; margin-left: 10px;">            </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">0</div>
-                <div class="cardName">Reviews</div>
+                <div class="numbers">${adminCount}</div>
+                <div class="cardName">Admins</div>
             </div>
 
             <div class="iconBx">
-                <img src="${pageContext.request.contextPath}/assets/img/reviews.png" alt="" style="width: 55px; margin-left: 50px;">            </div>
+                <img src="${pageContext.request.contextPath}/assets/img/admin.png" alt="" style="width: 55px; margin-left: 50px;">            </div>
         </div>
 
         <div class="card">
             <div>
-                <div class="numbers">Rs 0</div>
-                <div class="cardName">Revenue</div>
+                <div class="numbers" style="font-size:32px;">$${totalAmount}</div>
+                <div class="cardName">Total Amount</div>
             </div>
 
             <div class="iconBx">
