@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Admin Dashboard</title>
     <link rel="icon" href="${pageContext.request.contextPath}/assets/Logo/Finallogo.png" type="image/x-icon">
-    <!-- ======= Styles ====== -->
+    
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/AdminDashBoard.css" />
-    <style>
+       <style>
  /*user css*/
 .user-container {
  		background-color: white;
@@ -29,62 +29,81 @@
     .user-container h2 {
       color: #c084fc;
     }
+    
+.container1{
 
-    .btn {
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+		background-color: white;
+       padding: 30px;
+      border-radius: 10px;
+       max-width: 1500px;
+      margin: auto;
+       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-left: 80px;
+      margin-bottom: 30px;
+      margin-top: 50px;
+
+}
+
+  .container1 h2 {
+      color: #c084fc;
     }
 
-    .btn-dashboard {
-      background-color: #22c55e;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    th, td {
-      text-align: left;
-      padding: 0.75rem;
-      border-bottom: 1px solid #334155;
-    }
+.btn-dashboard {
+  background-color: #22c55e;
+  color: #fff;
+  margin-bottom: 16px;
+}
 
-    .role-user {
-      background-color: #3b82f6;
-      padding: 0.3rem 0.6rem;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 0.85rem;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
 
-    .role-admin {
-      background-color: #ef4444;
-      padding: 0.3rem 0.6rem;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 0.85rem;
-    }
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #334155;
+}
 
-    .profile-yes {
-      background-color: #22c55e;
-      padding: 0.3rem 0.6rem;
-      border-radius: 5px;
-      font-size: 0.85rem;
-      color: #fff;
-    }
+.role-user {
+  background-color: #3b82f6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
 
-    .btn-delete {
-      background-color:#ef4444;
-      margin-right: 0.5rem;
-      color: #fff;
-      
-    }
+.role-admin {
+  background-color: #ef4444;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.profile-yes {
+  background-color: #22c55e;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  margin-right: 8px;
+  color: #fff;
+}
+
 
     .btn-edit {
       background-color: #3b82f6;
@@ -94,6 +113,100 @@
     .actions {
       display: flex;
     }
+    
+    .success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+    
+    /* Styles for Account Settings section inside .container1 */
+
+.container1 .accset {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.container1 .genral {
+    font-size: 20px;
+    font-weight: 900;
+    color: #8b5cf6;
+    margin-bottom: 5px;
+}
+
+.container1 .parg {
+    font: 14px;
+    color: #374151;
+    margin-bottom: 15px;
+}
+
+.container1 .placefield {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.container1 .lefttext,
+.container1 .righttxt {
+    width: 48%;
+}
+
+.container1 .placetxt1,
+.container1 .placetxt2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.container1 .plcholder {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.container1 .plcholder:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 5px rgba(139, 92, 246, 0.5);
+}
+
+.container1 .buttons {
+    margin-top: 20px;
+    
+}
+    .save-btn {
+  width: 150px;
+  height: 38px;
+  background-color: #4D55CC;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #8990ea;
+}
+
+.save-btn:active {
+  background-color: #b9ccec;
+}
+
     </style>
 </head>
 
@@ -200,46 +313,147 @@
 
     
             <!---for user view  and delete-->
-    
-  <div class="user-container">
-    <h2>Manage Users</h2>
-    <p>Manage all users in the system</p>
-    <br>
+<!--Manage Users Section----- -->
 
-    <form action="DeleteUserUtil" method="post">
+<div class="user-container">
+
+  <!-- Section Header -->
+  <h2>Manage Users</h2>
+  <p>Manage all users in the system</p>
+  <br>
+
+  <!--  Display success message if a user was deleted -->
+  <c:if test="${not empty sessionScope.deleteStatus}">
+    <div class="success-message">
+      ${sessionScope.deleteStatus}
+    </div>
+    <!-- Remove the message from session after displaying to avoid repeat on refresh -->
+    <c:remove var="deleteStatus" scope="session" />
+  </c:if>
+
+  <!-- Form for deleting users -->
+  <form action="DeleteUserUtil" method="post">
     
-      <table>
-        <thead>
-          <tr>
-            <th>User Name</th>
-            <th>Email</th>
-            <th>PhoneNumber</th>
-            <th>D.O.B</th>
-			<th>Profile</th>
-            <th>Gender</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-           <c:forEach var="user" items="${adminUsers}">
+    <!-- Table for listing users -->
+    <table>
+      <thead>
         <tr>
-          <td>${user.username}</td>
-          <td>${user.email}</td>
-          <td>${user.phoneNumber}</td> 
-          <td>${user.dateOfBirth}</td> 
-		  <td><span class="profile-yes">Yes</span></td>
-          <td>${user.gender}</td>
-          <td class="actions">
-            <button type="submit" name="delete" value="${user.username}" class="btn btn-delete">Remove</button>
-          </td>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>D.O.B</th>
+          <th>Profile</th>
+          <th>Gender</th>
+          <th>Actions</th>
         </tr>
-      </c:forEach>
-      
-        </tbody>
-      </table>
-    </form>
-  </div>
-   
+      </thead>
+
+      <tbody>
+        <!-- Loop through the list of users and display each one -->
+        <c:forEach var="user" items="${adminUsers}">
+          <tr>
+            <td>${user.username}</td>
+            <td>${user.email}</td>
+            <td>${user.phoneNumber}</td>
+            <td>${user.dateOfBirth}</td>
+            
+            <!-- Assume all users have a profile; statically showing 'Yes' -->
+            <td><span class="profile-yes">Yes</span></td>
+            <td>${user.gender}</td>
+
+            <!-- Button to delete this specific user -->
+            <td class="actions">
+              <button type="submit" name="delete" value="${user.username}" class="btn btn-delete">Remove</button>
+            </td>
+          </tr>
+        </c:forEach>
+      </tbody>
+    </table>
+  </form>
+</div>
+
+
+<!--  Admin profile details edit section--- -->
+   <main>
+        <div class="container1">
+            <div class="Glasscontainer">
+                <div class="toptext">
+                    <h2 style="margin-bottom: 20px;">Admin Account Settings</h2>
+                   
+                        <div>
+                    <p style="margin-bottom: 10px;">Setup your admin accounts and change password</p>
+                </div>
+                              
+                </div>
+                   <!-- Display validation messages  -->
+                        <div>
+                            <% String status = (String) request.getAttribute("status"); %>
+                            <% if (status != null) { %>
+                                <div class="parg">
+                                    <%= status %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                <div class="placefield">
+                    <div class="lefttext" style="padding-left: 93px;">
+                        <form action="adminProfile" method="post">
+                        <!-- Hidden field to identify this as a profile update action -->
+                        <input type="hidden" name="action" value="update">
+                        
+                        <%
+						    String fullName = (session.getAttribute("FullName") != null) ? session.getAttribute("FullName").toString() : "";
+						    String username = (session.getAttribute("Username") != null) ? session.getAttribute("Username").toString() : "";
+						    String dob = (session.getAttribute("DateOfBirth") != null) ? session.getAttribute("DateOfBirth").toString() : "";
+						    String gender = (session.getAttribute("Gender") != null) ? session.getAttribute("Gender").toString() : "";
+						    String phone = (session.getAttribute("PhoneNumber") != null) ? session.getAttribute("PhoneNumber").toString() : "";
+						    String email = (session.getAttribute("Email") != null) ? session.getAttribute("Email").toString() : "";
+						%>
+                                <div >
+                                    <h3 class="placetxt1">Full Name</h3>
+
+                                    <input type="text" name="FullName" placeholder="<%= session.getAttribute("FullName") %>" required class="plcholder" ><br>
+                                </div>
+                                <div>
+                                    <h3 class="placetxt1">Date of Birth</h3>
+                                    <input type="date" name="Dateobirth" placeholder="<%= session.getAttribute("DateOfBirth") %>" required class="plcholder" >
+                                </div>
+                                <div>
+                                    <h3 class="placetxt1">Gender</h3>
+                                    <input type="gender" name="Gender" placeholder="<%= session.getAttribute("Gender") %>" required class="plcholder" ><br>
+                                </div>
+                                <div>
+                                    <h3 class="placetxt1">Phone Number</h3>
+                                    <input type="number" name="Phonenumber" placeholder="<%= session.getAttribute("PhoneNumber") %>" required class="plcholder" ><br>
+                                </div> 
+                    </div>
+                        <div class="righttxt" >
+                            
+                                    <div >
+                                        <h3 class="placetxt2">User Name (Must be Same as present)</h3>
+                                        <input type="text" name="Username" placeholder="<%= session.getAttribute("Username")%>" required class="plcholder" ><br>
+                                    </div>
+                                    <div>
+                                        <h3 class="placetxt2">Email</h3>
+                                        <input type="datetime" name="Email" placeholder="<%= session.getAttribute("Email") %>" required class="plcholder" >
+                                    </div>
+                                    <div>
+                                        <h3 class="placetxt2">Change Password</h3>
+                                        <input type="password" name="Password" placeholder="New Password" required class="plcholder" ><br>
+                                    </div>
+                        
+
+                                    <div class="buttons">
+                                        <button type="submit" class="save-btn" value="update">Save Changes</button>
+                                       
+                                    </div>
+                            </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
