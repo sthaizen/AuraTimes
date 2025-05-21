@@ -107,7 +107,8 @@
 
     <div class="team-member">
       <div class="team-photo" style="background-image: url('images/team/anil.jpg'); list-style: none;"></div>
-      <h3>Niran Bhatta</h3>
+      <a href="Nbindex" target="_blank"><h3 >Niran Bhatta</h3></a>
+
       <p>Creative Director</p>
       <div class="team-socials">
 
@@ -125,7 +126,7 @@
 
     <div class="team-member">
       <div class="team-photo" style="background-image: url('images/team/smriti.jpg');"></div>
-      <h3>Sakshyam Kafle</h3>
+      <a href="Skindex" target="_blank"><h3 >Sakshyam Kafle</h3></a>
       <p>COO</p>
       <div class="team-socials">
 
