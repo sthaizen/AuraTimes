@@ -264,6 +264,102 @@
         </div>
 
     </section>
+    
+    <section class="team-section">
+
+        <h2>Special Thanks to </h2>
+
+        <div class="team-container">
+
+
+
+            <div class="team-member">
+
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/Dwin.jpg');"></div>
+
+                <a href="#" target="_blank" style=" text-decoration: none; color: black;""><h3 >Darwin Paudel</h3></a>
+                <div class="team-socials">
+
+                    <a href="https://www.instagram.com/_itssujallll/" target="_blank"></a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="team-member">
+
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/Hemu.jpeg');"></div>
+
+                <a href="#" target="_blank" style=" text-decoration: none; color: black;"><h3 >Yograj Rijal</h3></a>
+
+                
+
+                <div class="team-socials">
+
+                    <a href="https://www.instagram.com/_itssujallll/" target="_blank"></a>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="team-member">
+
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/IMG_4535.png');"></div>
+
+                <a href="#" target="_blank" style=" text-decoration: none; color: black;""><h3 >Pratham Shrestha</h3></a>
+
+
+                <div class="team-socials">
+
+                    <a href="https://www.instagram.com/_itssujallll/" target="_blank"></a>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="team-member">
+
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/IMG_4536.jpeg');"></div>
+
+                <h3>Agaman Adakari</h3>
+
+               
+
+                <div class="team-socials">
+
+                    <a href="https://www.instagram.com/_itssujallll/" target="_blank"></a>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="team-member">
+
+                <div class="team-photo" style="background-image: url('${pageContext.request.contextPath}/assets/img/sanskar.png');"></div>
+
+                <a href="#" target="_blank"  style=" text-decoration: none; color: black;"><h3 >Sanskar Sharma</h3></a>
+
+                
+
+                <div class="team-socials">
+
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
 
