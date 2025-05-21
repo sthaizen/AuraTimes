@@ -60,7 +60,7 @@
                     <li><a href="aboutus">ABOUT US</a></li>
                     <li><a href="AdminDashBoard">FRIENDS & PARTHER</a></li>
                     <li><a href="storelocation">STORE LOCATIONS</a></li>
-                    <li><a href="login">ACCOUNT</a></li>
+                    <li><a href="#">ACCOUNT</a></li>
                 </ul>
             </div>
             <div class="Vector1"><img src="${pageContext.request.contextPath}/assets/PNG/Vector 1.png" alt="Line" /></div>
