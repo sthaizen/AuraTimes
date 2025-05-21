@@ -1,98 +1,175 @@
-package com.islington.controller;
+package com.Auratimes.controller;
 
+import com.Auratimes.util.ValidationUtil;
+import com.Auratimes.config.DbConfig;
+import com.Auratimes.util.PasswordUtil;
+import com.Auratimes.model.UserModel;
+import com.Auratimes.service.AdminDashboardService;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
 
-import com.Auratimes.config.DbConfig;
-
-import java.io.File;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.util.List;
-import com.Auratimes.model.UserModel;
-
-import com.Auratimes.model.ProductModel;
-import com.Auratimes.service.AdminDashboardService;
-
+/**
+ * Servlet implementation for admin profile management
+ * We created this controller specifically to handle admin profile updates
+ * after removing product-related functionality to separate controller.
+ */
 @WebServlet(asyncSupported = true, urlPatterns = { "/adminProfile" })
-@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2,  // 2MB
-                 maxFileSize = 1024 * 1024 * 10,       // 10MB
-                 maxRequestSize = 1024 * 1024 * 50)    // 50MB
 public class AdminProfileController extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private static final String UPLOAD_DIR = "uploads"; // folder to save uploaded images
 
+    // ====================== GET REQUEST HANDLER ====================== //
+    /**
+     * Handles GET requests for admin profile page
+     * We use this to load all registered users for admin dashboard display
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        // We initialize the service to fetch user data
         AdminDashboardService service = new AdminDashboardService();
         
-        List<ProductModel> adminProducts = service.getAllAdminProducts(); // use new name
-        request.setAttribute("adminProducts", adminProducts); // JSP expects "productList"
-        
+        // We get all registered users to display in admin panel
         List<UserModel> adminUsers = service.getAllRegisteredUsers();
         request.setAttribute("adminUsers", adminUsers);
-
+        
+        // We forward to the admin profile page with user data
         request.getRequestDispatcher("/WEB-INF/pages/AdminProfile.jsp").forward(request, response);
     }
 
+    // ====================== POST REQUEST HANDLER ====================== //
+    /**
+     * Handles POST requests for profile updates
+     * We made this to process admin profile update forms
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            // Fetch form parameters
-            String productName = request.getParameter("product_name");
-            String description = request.getParameter("description");
-            Double productPrice = Double.parseDouble(request.getParameter("product_price"));
-            String watchBrand = request.getParameter("watch_brand");
-            Double previousBid = Double.parseDouble(request.getParameter("previous_bid"));
+        
+        // We delegate profile update logic to separate method
+        updateAdminProfile(request, response);
+    }
+    
+    // ====================== PROFILE UPDATE METHOD ====================== //
+    /**
+     * Handles the actual profile update logic
+     * We created this method to centralize all update operations
+     */
+    private void updateAdminProfile(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        // We retrieve all form parameters from the request
+        String fullName = request.getParameter("FullName");
+        String username = request.getParameter("Username");
+        String dateOfBirth = request.getParameter("Dateobirth");
+        String gender = request.getParameter("Gender");
+        String email = request.getParameter("Email");
+        String password = request.getParameter("Password");
+        String phoneNumber = request.getParameter("Phonenumber");
 
-            // Handle file upload
-            Part part = request.getPart("product_img");
-            String fileName = part.getSubmittedFileName();
+        // We reload user data to keep dashboard updated
+        AdminDashboardService service = new AdminDashboardService();
+        List<UserModel> adminUsers = service.getAllRegisteredUsers();
+        request.setAttribute("adminUsers", adminUsers);
+        
+        // We prepare the dispatcher for forwarding requests
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/AdminProfile.jsp");
 
-            // Get absolute path to save file
-            String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIR;
-            File uploadDir = new File(uploadPath);
-            if (!uploadDir.exists()) uploadDir.mkdir();
-
-            // Save the file
-            part.write(uploadPath + File.separator + fileName);
-
-            // Save product to database
-            try (Connection con = DbConfig.getDbConnection()) {
-                String sql = "INSERT INTO product (product_name, description, product_price, product_img, watch_brand, previous_bid) VALUES (?, ?, ?, ?, ?, ?)";
-                PreparedStatement pst = con.prepareStatement(sql);
-                pst.setString(1, productName);
-                pst.setString(2, description);
-                pst.setDouble(3, productPrice);
-                pst.setString(4, fileName);
-                pst.setString(5, watchBrand);
-                pst.setDouble(6, previousBid);
-
-                int row = pst.executeUpdate();
-                if (row > 0) {
-                    request.setAttribute("status", "Product uploaded successfully!");
-                } else {
-                    request.setAttribute("status", "Failed to upload product.");
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                request.setAttribute("status", "Database error: " + e.getMessage());
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            request.setAttribute("status", "Unexpected error: " + e.getMessage());
+        // ========= INPUT VALIDATION SECTION ========= //
+        // We validate full name isn't empty
+        if (ValidationUtil.isNullOrEmpty(fullName)) {
+            request.setAttribute("status", "Full name cannot be empty");
+            dispatcher.forward(request, response);
+            return;
+        }
+        
+        // We check username follows alphanumeric pattern
+        if (!ValidationUtil.isAlphanumericStartingWithLetter(username)) {
+            request.setAttribute("status", "Username not matching");
+            dispatcher.forward(request, response);
+            return;
+        }
+        
+        // We validate gender is either male or female
+        if (!ValidationUtil.isValidGender(gender)) {
+            request.setAttribute("status", "Gender must be 'male' or 'female'");
+            dispatcher.forward(request, response);
+            return;
+        }
+        
+        // We verify email format is correct
+        if (!ValidationUtil.isValidEmail(email)) {
+            request.setAttribute("status", "Invalid email format");
+            dispatcher.forward(request, response);
+            return;
+        }
+        
+        // We enforce strong password requirements
+        if (!ValidationUtil.isValidPassword(password)) {
+            request.setAttribute("status", "Password must be 8+ chars, with a number, symbol, and uppercase letter");
+            dispatcher.forward(request, response);
+            return;
+        }
+        
+        // We validate Nepali phone number format
+        if (!ValidationUtil.isValidPhoneNumber(phoneNumber)) {
+            request.setAttribute("status", "Phone number must be a 10-digit Nepali number starting with 98");
+            dispatcher.forward(request, response);
+            return;
         }
 
-        request.getRequestDispatcher("/WEB-INF/pages/AdminProfile.jsp").forward(request, response);
+        // ========= DATABASE UPDATE SECTION ========= //
+        try (Connection con = DbConfig.getDbConnection()) {
+            // We prepare SQL query to update admin profile
+            String sql = "UPDATE users SET FullName = ?, DateOfBirth = ?, Gender = ?, Email = ?, Password = ?, PhoneNumber = ? WHERE Username = ?";
+            
+            try (PreparedStatement pst = con.prepareStatement(sql)) {
+                // We set all parameters for the update query
+                pst.setString(1, fullName);
+                pst.setString(2, dateOfBirth);
+                pst.setString(3, gender);
+                pst.setString(4, email);
+                
+                // We encrypt the password before storing
+                String encryptedPassword = PasswordUtil.encrypt(password, username);
+                pst.setString(5, encryptedPassword);
+                
+                pst.setString(6, phoneNumber);
+                pst.setString(7, username);
+
+                // We execute the update and check if it succeeded
+                int rowCount = pst.executeUpdate();
+
+                if (rowCount > 0) {
+                    request.setAttribute("status", "Admin profile updated successfully!");
+                    
+                    // We update session attributes to reflect changes immediately
+                    request.getSession().setAttribute("FullName", fullName);
+                    request.getSession().setAttribute("DateOfBirth", dateOfBirth);
+                    request.getSession().setAttribute("Gender", gender);
+                    request.getSession().setAttribute("Email", email);
+                    request.getSession().setAttribute("PhoneNumber", phoneNumber);
+                } else {
+                    request.setAttribute("status", "Update failed. Admin user not found.");
+                }
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            request.setAttribute("status", "Database error: " + e.getMessage());
+        }
+
+        // We forward back to profile page with status message
+        dispatcher.forward(request, response);
     }
 }
