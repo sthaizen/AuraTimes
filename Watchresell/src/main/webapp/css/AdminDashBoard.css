@@ -165,9 +165,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 40px;
   cursor: pointer;
 }
+
 
 
 
@@ -189,125 +190,48 @@ body {
   object-fit: cover;
 }
 
-/* ======================= reviews wala section ====================== */
-
-.recentCustomers {
-  position: relative;
-  display: grid;
-  background: white;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-  left:1435px;
-  cursor: pointer;
-  height: 490px;
-  margin-top: 10px;
-  position:relative;
- z-index: 2;
-
-}
-.imgBx-1 img{
-width: 50px;
-position: relative;
-left: 25px;
-}
-.recentCustomers table tr{
-  display:flex;
-  
-}
-.recentCustomers table tr td {
-  padding-left:25px;
-  margin-right:90px;
-
-  padding-bottom: 30px;
-
-}
-
-.recentCustomers table tr:hover {
-  background: #7d95b4;
-  color: white;
-}
-.imgBx-1 img{
-  border-radius: 50px;
-  width: 65px;
-}
-/* ======================= reviews wala section ====================== */
-
-/* ======================= bestselling section ====================== */
-
-.bestselling {
-  position: relative;
-  display: grid;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-  left:1435px;
-  cursor: pointer;
-  height: 490px;
-  margin-top: 10px;
-   position:relative;
- z-index: 2;
-
-}
-
-.bestselling table tr td {
-  padding: 12px 25px;
-  margin-bottom: 80px;
-
-}
-.bestselling span{
-  font-size: 12.5px;
-}
-.bestselling table tr:hover {
-  background: #7d95b4;
-  color: white;
-}
-
-.righttxt{
-  width: 200px;
-  position:relative;
-    text-align: justify;
-}
-
-/* ======================= bestselling wala section ====================== */
 
 
 /*--- card layout main page----*/
 /* ======================= Cards ====================== */
 .cardBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  top: 30px;
+  left: 80px;
+  
   position: relative;
-  width: 75%;
-  left: 210px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-  top: 65px;
 }
 
 .cardBox .card {
+  flex: 1 1 22%;
+  max-width: 20%;
   position: relative;
-  background: var(--white);
-  padding: 30px;
+  background: white;
+  padding: 25px;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  
 }
+
 
 .cardBox .card .numbers {
   position: relative;
   font-weight: 500;
-  font-size: 2.5rem;
-  color: var(--blue);
+  font-size: 40px; 
+  color: #4250cb;
 }
 
 .cardBox .card .cardName {
-  color: var(--black2);
-  font-size: 1.1rem;
+  color: blackcolor;
+  font-size: 18px; 
   margin-top: 5px;
 }
+
 
 
 .cardBox .card:hover {
@@ -326,16 +250,16 @@ left: 25px;
 /*-- stats image---*/
 .statsimg{
   width: 1000px;
-  left: 200px;
-  top: 20px;
+ 
 }
 
 .statsimg img{
 	
 
-width: 1300px;
+width: 1190px;
 position: relative;
-z-index: 1;
+border-radius:30px;
+
 }
 
 
@@ -360,44 +284,4 @@ z-index: 1;
   }
 }
 
-@media (max-width: 768px) {
-  .details {
-    grid-template-columns: 1fr;
-  }
-  .recentOrders {
-    overflow-x: auto;
-  }
-  .status.inProgress {
-    white-space: nowrap;
-  }
-}
 
-@media (max-width: 480px) {
-  .cardBox {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .cardHeader h2 {
-    font-size: 20px;
-  }
-  .user {
-    min-width: 40px;
-  }
-  .navigation {
-    width: 100%;
-    left: -100%;
-    z-index: 1000;
-  }
-  .navigation.active {
-    width: 100%;
-    left: 0;
-  }
-  .toggle {
-    z-index: 10001;
-  }
-  .main.active .toggle {
-    color: #fff;
-    position: fixed;
-    right: 0;
-    left: initial;
-  }
-}
