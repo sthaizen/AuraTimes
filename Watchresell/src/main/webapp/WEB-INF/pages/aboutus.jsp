@@ -16,6 +16,22 @@
 </head>
 </head>
 <body>
+<nav class="main-nav" style="top: 15px;">
+            <div class="menuebar" style="position: relative; left: 60px; cursor: pointer;"> 
+            <div class="menuebar" style="position: relative; left: 0px; cursor: pointer;"><a class="Menu">Menu</a></div>
+            </div>
+           
+            <div class="logo" style="position: relative; left: 210px;">
+            <a href="home.html"><img src="${pageContext.request.contextPath}/assets/PNG/Logo.png" alt="Logo" /></div></a>
+            <div class="inner-main-nav">
+                <ul>
+                    <li id="coll"><a href="#">Collections</a></li>
+                    <li id="coll"><a href="contact">Contact</a></li>
+                    <li id="coll"><a href="addtocart">Add to cart</a></li>
+                </ul>
+            </div>
+            
+        </nav>
 
 
 
@@ -215,7 +231,7 @@
 
                 <a href="Nbindex" target="_blank" style=" text-decoration: none; color: black;""><h3 >Niran Bhatta</h3></a>
 
-                <p>Marketing Manager</p>
+                <p>Content Writer</p>
 
                 <div class="team-socials">
 
@@ -233,7 +249,7 @@
 
                 <h3>Waseem Malik</h3>
 
-                <p>Fontend Developer</p>
+                <p>Wireframe Designer</p>
 
                 <div class="team-socials">
 
