@@ -95,7 +95,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Omega.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">MOONWATCH</p>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="login" style="text-decoration: none;">
                             <h2 class="maintxt11">Omega Speed Master</h2>
                         </a>
                     </div>
@@ -104,7 +104,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/Rolexsub.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">DAY-JUST</p>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="login" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex Submariner</h2>
                         </a>
                     </div>
@@ -113,7 +113,7 @@
                     <img src="${pageContext.request.contextPath}/assets/img/yatmaster.png" alt="" class="watchimg ">
                     <div class="watchstxt">
                         <p class="toptxtt">LATEST 2025</p>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="login" style="text-decoration: none;">
                             <h2 class="maintxt11">Rolex Yacht-Master</h2>
                         </a>
                     </div>
