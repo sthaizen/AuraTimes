@@ -5,4 +5,4 @@ Developed a dynamic e-commerce website for watch reselling with secure login, en
 ## Project Documentation
 
 📄 [Final Report – PDF](./Documentation/Final_Report_AuraTimes.pdf)  
-This report includes technical architecture, database design, MVC structure breakdown, and functional implementation details for the AuraTimes e-commerce platform.
+This report includes technical architecture,database design, MVC structure breakdown, and functional implementation details for the AuraTimes e-commerce platform.
